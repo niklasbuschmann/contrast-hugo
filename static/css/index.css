@@ -1,0 +1,47 @@
+nav {
+    margin: .5em -.8em;
+}
+
+nav a {
+    padding: 0 .8em;
+}
+
+table {
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+body > header h1 {
+    font-size: 1.6em;
+}
+
+header h1 {
+    margin: 0;
+}
+
+article header {
+    margin-bottom: 1.5em;
+}
+
+article header h1 {
+    font-size: 1.75em;
+    margin-bottom: .2em;
+}
+
+.archive li {
+    padding: .3em 0;
+}
+
+.archive a {
+    font-size: 1.1em;
+}
+
+.archive time {
+    display: inline-block;
+    font-size: 1.05em;
+    width: 6em;
+    margin: 0 .25em;
+}
