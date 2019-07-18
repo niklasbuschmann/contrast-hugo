@@ -3,8 +3,8 @@ license = "MIT"
 licenselink = "https://github.com/niklasbuschmann/contrast-hugo/blob/master/UNLICENSE.txt"
 description = "Minimalistic Hugo theme"
 homepage = "https://github.com/niklasbuschmann/contrast-hugo"
-tags = []
-features = []
+tags = ["blog"]
+features = ["blog"]
 min_version = "0.41"
 
 [author]
