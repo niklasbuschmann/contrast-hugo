@@ -2,8 +2,11 @@
 <html lang="{{ .Site.LanguageCode | default "en" }}">
 <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ hugo.Generator }}
+{{- if or .Description .Site.Params.description }}
 <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+{{- end }}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="alternate" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" title="{{ .Site.Title }}">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/index.css">
