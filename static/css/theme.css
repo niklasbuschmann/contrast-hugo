@@ -81,7 +81,7 @@ th, td {
 }
 
 pre {
-    background: rgba(38,38,38,0.8);
+    background: rgba(38,38,38,0.9)!important;
     color: #fff;
     border-radius: 2px;
     font-size: .8em;
@@ -126,7 +126,7 @@ body > header, article, body > footer {
 
 @media (max-width: 40em) {
     body > header, article, body > footer {
-        padding:1.5em 1em;
+        padding: 1.5em 1em;
     }
 }
 
