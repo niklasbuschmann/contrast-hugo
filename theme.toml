@@ -1,5 +1,5 @@
 name = "Contrast"
-license = "MIT"
+license = "public domain"
 licenselink = "https://github.com/niklasbuschmann/contrast-hugo/blob/master/LICENSE.txt"
 description = "Minimalistic Hugo theme"
 homepage = "https://github.com/niklasbuschmann/contrast-hugo"
