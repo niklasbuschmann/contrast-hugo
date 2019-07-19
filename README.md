@@ -2,7 +2,7 @@ Adaption of the Jekyll version of [contrast](https://github.com/niklasbuschmann/
 
 ## Installation
 
-To install Hyde as your default theme, first install this repository in the `themes/` directory:
+To install Contrast as your default theme, first install this repository in the `themes/` directory:
 
     $ cd themes/
     $ git clone https://github.com/niklasbuschmann/contrast-hugo.git
