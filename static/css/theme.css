@@ -1,3 +1,10 @@
+@media (prefers-color-scheme: dark) {
+    html {
+        background: #282828;
+        color: #fff;
+    }
+}
+
 body {
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     font-size: 16px;
@@ -50,7 +57,7 @@ hr {
 
 blockquote {
     background: rgba(148,148,148,0.06);
-    border-left: 3px solid rgba(148,148,148,0.6);
+    border-left: 4px solid #68f;
     padding: 1px 1.5em;
 }
 
@@ -106,20 +113,6 @@ body > header, body > footer {
     align-items: center;
 }
 
-@media (prefers-color-scheme: light) {
-    html {
-        background: #fff;
-        color: #282828;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    html {
-        background: #282828;
-        color: #fff;
-    }
-}
-
 body > header, article, body > footer {
     padding: 1.5em calc(34% - 12rem);
 }
@@ -134,7 +127,11 @@ article, body > footer {
     border-top: 1px solid rgba(148,148,148,0.12);
 }
 
-body > header {
+body > header.bright {
+    box-shadow: 0 0 1em rgba(40, 40, 40, .05);
+}
+
+body > header.dark {
     background: #2b2b2b;
     color: #fff;
 }

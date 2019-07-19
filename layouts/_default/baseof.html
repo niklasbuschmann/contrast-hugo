@@ -17,7 +17,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/mathtex-script-type.min.js" integrity="sha256-b8diVEOgPDxUp0CuYCi7+lb5xIGcgrtIdrvE8d/oztQ=" crossorigin="anonymous"></script>
 {{- end }}
 
-<header>
+<header class="{{ if .Site.Params.brightheader }}bright{{ else }}dark{{ end }}">
   <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
   <nav>
     {{ range .Site.Menus.main }}

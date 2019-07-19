@@ -13,6 +13,10 @@ Second, specify `contrast-hugo` as your default theme in the `config.toml` file.
 
 at the top of the file.
 
+## Options
+
+To use the bright header, you can set `brightheader = true` in the `params` section of your config.
+
 ## Features
 
  - supports dark mode on macOS Mojave
