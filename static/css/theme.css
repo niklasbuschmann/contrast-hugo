@@ -20,7 +20,7 @@ body, blockquote, figure {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: inherit;
+    font-weight: 400;
 }
 
 b, strong, th {
@@ -88,8 +88,7 @@ th, td {
 }
 
 pre {
-    background: rgba(38,38,38,0.9)!important;
-    color: #fff;
+    background: rgba(148,148,148,0.08);
     border-radius: 2px;
     font-size: .8em;
     margin: 1.5em 0;
