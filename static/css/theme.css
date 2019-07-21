@@ -8,7 +8,7 @@
 body {
     font-family: system-ui,-apple-system,"Helvetica Neue","Segoe UI",sans-serif;
     font-size: 16px;
-    font-size: calc(0.8em + 0.25vw);
+    font-size: calc(0.8rem + 0.25vw);
     font-weight: 400;
     line-height: 1.65;
     color: #282828;
@@ -93,6 +93,7 @@ pre {
 }
 
 p code {
+    font-size: .9em;
     background: #94949426;
     opacity: .75;
     border-radius: 2px;
