@@ -74,13 +74,8 @@ table {
     box-shadow: 0px 0px 0px 1px #94949429 inset;
 }
 
-tr:hover, tr:nth-child(even) td {
-    background: #9494940f;
-}
-
-th {
-    background: #9494941a;
-    text-align: inherit;
+tr:hover, tr:nth-child(odd) td {
+    background: #94949414;
 }
 
 th, td {
@@ -101,7 +96,6 @@ p code {
     background: #94949426;
     opacity: .75;
     border-radius: 2px;
-    font-size: .9em;
     margin: 0 .1em;
     padding: .2em .4em;
 }
