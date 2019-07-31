@@ -1,29 +1,19 @@
-nav {
-  margin: .5em -.8em;
-}
-
-nav a {
-  padding: 0 .8em;
-}
-
-h1 {
-  font-size: 1.7em;
-}
-
 body > header h1 {
   font-size: 1.6em;
 }
 
-header h1 {
-  margin: 0;
-}
-
-article header {
-  margin-bottom: 1.5em;
-}
-
 article header h1 {
+  font-size: 1.7em;
   margin-bottom: .2em;
+}
+
+.bright {
+  box-shadow: 0 0 .6em #3c3c3c0f;
+}
+
+.dark {
+  background: #2b2b2b;
+  color: #fff;
 }
 
 .archive li {

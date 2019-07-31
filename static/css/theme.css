@@ -108,6 +108,22 @@ body > header, body > footer {
   align-items: center;
 }
 
+header h1 {
+  margin: 0;
+}
+
+nav {
+  margin: .5em -.8em;
+}
+
+nav a {
+  margin: 0 .8em;
+}
+
+article header {
+  margin-bottom: 1.5em;
+}
+
 article, body > footer {
   border-top: 1px solid #9494941f;
 }
@@ -120,13 +136,4 @@ body > header, article, body > footer {
   body > header, article, body > footer {
     padding: 1.5em calc(34% - 12rem);
   }
-}
-
-body > header.bright {
-  box-shadow: 0 0 .6em #3c3c3c0f;
-}
-
-body > header.dark {
-  background: #2b2b2b;
-  color: #fff;
 }
