@@ -79,7 +79,7 @@ th, td {
 }
 
 pre {
-  background: #94949414;
+  background: #94949422;
   border-radius: 2px;
   font-size: .8em;
   margin: 1.5em 0;
@@ -96,11 +96,10 @@ p code {
   padding: .2em .4em;
 }
 
-body > header, body > footer {
+body > header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
 }
 
 header h1 {
@@ -115,16 +114,12 @@ nav a {
   margin: 0 .8em;
 }
 
-article, body > footer {
-  border-top: 1px solid #9494941f;
-}
-
-body > header, article, body > footer {
+body > header, article {
   padding: 1.5em 1em;
 }
 
 @media (min-width: 40em) {
-  body > header, article, body > footer {
+  body > header, article {
     padding: 1.5em calc(34% - 12rem);
   }
 }

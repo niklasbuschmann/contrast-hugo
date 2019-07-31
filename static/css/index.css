@@ -2,7 +2,7 @@ body > header h1 {
   font-size: 1.6em;
 }
 
-article header h1 {
+article h1 {
   font-size: 1.7em;
 }
 
@@ -13,6 +13,7 @@ header p {
 
 .bright {
   box-shadow: 0 0 .6em #3c3c3c0f;
+  border-bottom: 1px solid #9494941f;
 }
 
 .dark {
