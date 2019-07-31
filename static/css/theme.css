@@ -34,7 +34,7 @@ a {
   transition: color .2s;
 }
 
-a:hover {
+a:hover, header time {
   color: #949494;
 }
 
@@ -43,12 +43,7 @@ article a {
 }
 
 article header a, article footer a {
-  font-weight: inherit;
   color: inherit;
-}
-
-header time {
-  color: #949494;
 }
 
 hr {
@@ -118,10 +113,6 @@ nav {
 
 nav a {
   margin: 0 .8em;
-}
-
-article header {
-  margin-bottom: 1.5em;
 }
 
 article, body > footer {

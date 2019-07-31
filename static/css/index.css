@@ -4,7 +4,11 @@ body > header h1 {
 
 article header h1 {
   font-size: 1.7em;
-  margin-bottom: .2em;
+}
+
+header p {
+  margin-top: .2em;
+  margin-bottom: 1.5em;
 }
 
 .bright {
