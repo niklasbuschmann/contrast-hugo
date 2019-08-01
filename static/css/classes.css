@@ -1,12 +1,8 @@
-body > header h1 {
+.hero {
   font-size: 1.6em;
 }
 
-article h1 {
-  font-size: 1.7em;
-}
-
-header p {
+.meta {
   margin-top: .2em;
   margin-bottom: 1.5em;
 }
