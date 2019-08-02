@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: -apple-system,"Helvetica Neue","Segoe UI",sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Roboto",sans-serif;
   font-size: 16px;
   font-size: calc(0.8rem + 0.25vw);
   font-weight: 400;
