@@ -71,8 +71,9 @@ img {
 }
 
 table {
+  box-shadow: 0 0 0 1px #9494941f inset;
+  border-spacing: 1px;
   width: 100%;
-  border-collapse: collapse;
 }
 
 tr:hover, tr:nth-child(odd) td {
@@ -80,7 +81,7 @@ tr:hover, tr:nth-child(odd) td {
 }
 
 th, td {
-  border: 1px solid #94949436;
+  box-shadow: 0 0 0 1px #9494941f inset;
   padding: .5em 1em;
 }
 
