@@ -81,7 +81,7 @@ tr:hover, tr:nth-child(odd) td {
 }
 
 th, td {
-  box-shadow: 0 0 0 1px #9494941f inset;
+  box-shadow: 0 0 0 1px #9494941f;
   padding: .5em 1em;
 }
 
