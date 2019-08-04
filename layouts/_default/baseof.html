@@ -18,7 +18,7 @@
 {{- end }}
 
 <header class="{{ if .Site.Params.brightheader }}bright{{ else }}dark{{ end }}">
-  <h1 class="hero"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+  <h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
   <nav>
     {{ range .Site.Menus.main }}
       <a href="{{ .URL }}">{{ .Name }}</a>

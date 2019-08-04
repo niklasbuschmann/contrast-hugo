@@ -109,8 +109,11 @@ body > header {
   justify-content: space-between;
 }
 
-header h1 {
+h1 {
   font-size: 1.7em;
+}
+
+header h1, header h2 {
   margin: 0;
 }
 
