@@ -18,6 +18,7 @@ body {
   font-size: calc(0.8rem + 0.25vw);
   font-weight: 400;
   line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -127,7 +128,7 @@ nav a {
 }
 
 body > header, article {
-  padding: 1.5em 1em;
+  padding: 1.5em;
 }
 
 @media (min-width: 40em) {
