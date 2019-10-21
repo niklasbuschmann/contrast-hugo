@@ -16,6 +16,9 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha256-TxnaXkPUeemXTVhlS5tDIVg42AvnNAotNaQjjYKK9bc=" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/mathtex-script-type.min.js" integrity="sha256-b8diVEOgPDxUp0CuYCi7+lb5xIGcgrtIdrvE8d/oztQ=" crossorigin="anonymous"></script>
 {{- end }}
+{{- if .Params.mermaid }}
+<script defer src="https://unpkg.com/mermaid@8.4.0/dist/mermaid.min.js"></script>
+{{ end }}
 
 <header class="{{ if .Site.Params.brightheader }}bright{{ else }}dark{{ end }}">
   <h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
