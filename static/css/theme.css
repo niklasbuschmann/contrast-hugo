@@ -95,7 +95,11 @@ pre {
   overflow-x: auto;
 }
 
-p code {
+pre code {
+  all: unset;
+}
+
+code {
   font-size: .9em;
   background: #94949426;
   opacity: .75;
@@ -124,7 +128,6 @@ nav {
 }
 
 nav a {
-  display: inline-block;
   margin: 0 .8em;
 }
 
