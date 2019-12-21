@@ -7,7 +7,7 @@
 {{ end }}
 
 <article>
-  <header><h1>{{ .Title | default "Posts" }}</h1></header>
+  <header><h1>{{ .Title | default "Posts" | humanize }}</h1></header>
   <ul class="archive">
     {{- range $Pages }}
     <li>

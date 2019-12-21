@@ -1,19 +1,19 @@
 @media (prefers-color-scheme: light) {
   html {
     background: #fff;
-    color: #282828;
+    color: #222;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
-    background: #282828;
+    background: #222;
     color: #fff;
   }
 }
 
 body {
-  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Roboto",sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
   font-size: 16px;
   font-size: calc(0.8rem + 0.25vw);
   font-weight: 400;
@@ -38,19 +38,18 @@ b, strong, th {
 a {
   color: inherit;
   text-decoration: inherit;
-  transition: color .2s;
 }
 
-a:hover, header time {
-  color: #949494;
+a:hover {
+  text-decoration: underline;
 }
 
 article a {
   color: #68f;
 }
 
-article header a, article footer a {
-  color: inherit;
+header time {
+  color: #949494;
 }
 
 hr {
@@ -97,6 +96,7 @@ pre {
 
 pre code {
   all: unset;
+  -webkit-text-fill-color: initial;
 }
 
 code {
@@ -115,12 +115,19 @@ body > header {
   align-items: center;
 }
 
-h1 {
-  font-size: 1.7em;
-}
-
 header h1, header h2 {
   margin: 0;
+}
+
+article header {
+  margin-bottom: 2em;
+}
+
+article header h1 {
+  font-size: 1.75em;
+  padding: .25em 0;
+  margin-bottom: .7em;
+  border-bottom: 1px solid #94949436;
 }
 
 nav {
@@ -128,7 +135,7 @@ nav {
 }
 
 nav a {
-  margin: 0 .8em;
+  padding: 0 .8em;
 }
 
 body > header, article {
