@@ -10,16 +10,13 @@
 }
 
 .archive li {
-  padding: .3em 0;
-}
-
-.archive a {
   font-size: 1.1em;
+  padding: .3em;
 }
 
 .archive time {
   display: inline-block;
-  font-size: 1.05em;
-  width: 6em;
+  min-width: 9ch;
   margin: 0 .25em;
+  opacity: .75;
 }
