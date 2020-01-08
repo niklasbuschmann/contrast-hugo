@@ -1,14 +1,14 @@
 @media (prefers-color-scheme: light) {
   html {
-    background: #fff;
-    color: #222;
+    background: #ffffff;
+    color: #18191d;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
-    background: #222;
-    color: #fff;
+    background: #18191d;
+    color: #ffffff;
   }
 }
 
@@ -17,7 +17,7 @@ body {
   font-size: 16px;
   font-size: calc(0.8rem + 0.25vw);
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.6;
   margin: 0;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -26,6 +26,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
+}
+
+h1 {
+  font-size: 1.75em
 }
 
 b, strong, th {
@@ -46,16 +50,16 @@ article a {
 }
 
 header time {
-  color: #949494;
+  color: #8c8c8e;
 }
 
 hr {
-  border: 1px solid #9494944d;
+  border: 1px solid #8c8c8e4d;
   margin: 2em 0;
 }
 
 blockquote {
-  background: #9494940f;
+  background: #8c8c8e0a;
   border-left: 4px solid #68f;
   padding: 1px 1.5em;
 }
@@ -75,22 +79,22 @@ img {
 }
 
 table {
-  box-shadow: 0 0 0 1px #9494941f inset;
+  box-shadow: 0 0 0 1px #8c8c8e1f inset;
   border-spacing: 1px;
   width: 100%;
 }
 
 tr:hover, tr:nth-child(odd) td {
-  background: #94949410;
+  background: #8c8c8e10;
 }
 
 th, td {
-  box-shadow: 0 0 0 1px #9494941f;
+  box-shadow: 0 0 0 1px #8c8c8e1f;
   padding: .5em 1em;
 }
 
 pre {
-  background: #94949422;
+  background: #8c8c8e22;
   border-radius: 2px;
   font-size: .8em;
   margin: 1.5em 0;
@@ -98,14 +102,9 @@ pre {
   overflow-x: auto;
 }
 
-pre code {
-  all: unset;
-  -webkit-text-fill-color: initial;
-}
-
-code {
+:not(pre) > code {
   font-size: .9em;
-  background: #94949426;
+  background: #8c8c8e26;
   opacity: .75;
   border-radius: 2px;
   margin: 0 .1em;
@@ -124,14 +123,13 @@ header h1, header h2 {
 }
 
 article header {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 article header h1 {
-  font-size: 1.75em;
-  padding: .25em 0;
-  margin-bottom: .7em;
-  border-bottom: 1px solid #94949436;
+  padding: .2em 0;
+  margin-bottom: .5em;
+  border-bottom: 1px solid #8c8c8e36;
 }
 
 nav {
@@ -139,7 +137,7 @@ nav {
 }
 
 nav a {
-  padding: 0 .8em;
+  margin: 0 .8em;
 }
 
 body > header, article {
@@ -148,6 +146,6 @@ body > header, article {
 
 @media (min-width: 40em) {
   body > header, article {
-    padding: 1.5em calc(34% - 12rem);
+    padding: 1.5em calc(35% - 12rem);
   }
 }
