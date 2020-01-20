@@ -13,8 +13,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
-  font-size: 16px;
+  font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
   font-size: calc(0.8rem + 0.25vw);
   font-weight: 400;
   line-height: 1.6;
@@ -24,12 +23,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (min-width: 50em) {
+  body {
+    font-size: 1.125rem
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
 h1 {
-  font-size: 1.75em
+  font-size: 1.8em
 }
 
 b, strong, th {
@@ -60,8 +65,12 @@ hr {
 
 blockquote {
   background: #8c8c8e0a;
-  border-left: 4px solid #68f;
+  border-left: 3px solid #8c8c8eb3;
   padding: 1px 1.5em;
+}
+
+blockquote p {
+  opacity: .7
 }
 
 blockquote, figure {
@@ -79,18 +88,20 @@ img {
 }
 
 table {
-  box-shadow: 0 0 0 1px #8c8c8e1f inset;
-  border-spacing: 1px;
   width: 100%;
-}
-
-tr:hover, tr:nth-child(odd) td {
-  background: #8c8c8e10;
+  border-collapse: collapse;
 }
 
 th, td {
-  box-shadow: 0 0 0 1px #8c8c8e1f;
   padding: .5em 1em;
+}
+
+tr {
+  border: 1px solid #8c8c8e33;
+}
+
+tr:hover, tr:nth-child(odd) td {
+  background: #8c8c8e0a;
 }
 
 pre {
@@ -105,7 +116,7 @@ pre {
 :not(pre) > code {
   font-size: .9em;
   background: #8c8c8e26;
-  opacity: .75;
+  opacity: .7;
   border-radius: 2px;
   margin: 0 .1em;
   padding: .2em .4em;
@@ -118,34 +129,38 @@ body > header {
   align-items: center;
 }
 
-header h1, header h2 {
+header h1 {
   margin: 0;
+}
+
+body > header > a {
+  font-size: 1.3em
 }
 
 article header {
   margin-bottom: 1.5em;
 }
 
-article header h1 {
-  padding: .2em 0;
-  margin-bottom: .5em;
-  border-bottom: 1px solid #8c8c8e36;
-}
-
 nav {
-  margin: .5em -.8em;
+  margin: .4em -.8em;
 }
 
 nav a {
-  margin: 0 .8em;
+  margin: .4em .8em;
 }
 
 body > header, article {
   padding: 1.5em;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 32em) {
   body > header, article {
-    padding: 1.5em calc(35% - 12rem);
+    padding: 1.5em calc(38% - 12em);
+  }
+}
+
+@media (min-width: 100em) {
+  body > header, article {
+    padding: 1.5em calc(46% - 20em);
   }
 }
