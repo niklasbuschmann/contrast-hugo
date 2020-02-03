@@ -7,11 +7,14 @@
 <meta name="description" content="{{ .Description | default .Site.Params.description }}">
 {{- end }}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="{{ .Site.BaseURL }}css/theme.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/index.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/classes.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}fonts/PT-Sans.css">
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="alternate" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" title="{{ .Site.Title }}">
+{{- if .Site.Params.FontAwesome }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
+{{- end }}
 {{- if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
 {{- end }}
@@ -20,7 +23,7 @@
   <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   <nav>
     {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
+      <a href="{{ .URL }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a>
     {{ end }}
   </nav>
 </header>
