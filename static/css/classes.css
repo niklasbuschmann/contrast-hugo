@@ -1,12 +1,13 @@
 .bright {
-  box-shadow: 0 0 .6em #3c3c3c0f;
-  border-bottom: 1px solid #8c8c8e1f;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 .6em rgba(28, 29, 34, 0.05);
+  border-bottom: 1px solid rgba(142, 142, 145, 0.16);
 }
 
 .dark {
-  background: #1a1b20;
+  background: #1e1f25;
   color: #fff;
-  border-bottom: 1px solid #fff1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .archive li {
@@ -16,6 +17,6 @@
 
 .archive time {
   display: inline-block;
-  min-width: 9.5ch;
-  margin: 0 .25em;
+  min-width: 10ch;
+  margin: 0 .2em;
 }

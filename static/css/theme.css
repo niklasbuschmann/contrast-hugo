@@ -1,20 +1,20 @@
 @media (prefers-color-scheme: light) {
   html {
     background: #ffffff;
-    color: #18191d;
+    color: #1c1d22;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
-    background: #18191d;
+    background: #1c1d22;
     color: #ffffff;
   }
 }
 
 body {
   font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
-  font-size: calc(0.8rem + 0.25vw);
+  font-size: calc(0.8rem + 0.3vw);
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
@@ -23,18 +23,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (min-width: 50em) {
-  body {
-    font-size: 1.125rem
-  }
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
-}
-
-h1 {
-  font-size: 1.8em
 }
 
 b, strong, th {
@@ -55,22 +45,22 @@ article a {
 }
 
 header time {
-  color: #8c8c8e;
+  color: #8e8e91;
 }
 
 hr {
-  border: 1px solid #8c8c8e4d;
+  border: 1px solid rgba(142, 142, 145, 0.3);
   margin: 2em 0;
 }
 
 blockquote {
-  background: #8c8c8e0a;
-  border-left: 3px solid #8c8c8eb3;
+  background: rgba(142, 142, 145, 0.04);
+  border-left: 3px solid rgba(142, 142, 145, 0.7);
   padding: 1px 1.5em;
 }
 
 blockquote p {
-  opacity: .7
+  opacity: .7;
 }
 
 blockquote, figure {
@@ -97,15 +87,15 @@ th, td {
 }
 
 tr {
-  border: 1px solid #8c8c8e33;
+  border: 1px solid rgba(142, 142, 145, 0.2);
 }
 
 tr:hover, tr:nth-child(odd) td {
-  background: #8c8c8e0a;
+  background: rgba(142, 142, 145, 0.04);
 }
 
 pre {
-  background: #8c8c8e22;
+  background: rgba(142, 142, 145, 0.12);
   border-radius: 2px;
   font-size: .8em;
   margin: 1.5em 0;
@@ -115,7 +105,7 @@ pre {
 
 :not(pre) > code {
   font-size: .9em;
-  background: #8c8c8e26;
+  background: rgba(142, 142, 145, 0.15);
   opacity: .7;
   border-radius: 2px;
   margin: 0 .1em;
@@ -129,16 +119,18 @@ body > header {
   align-items: center;
 }
 
-header h1 {
-  margin: 0;
-}
-
 body > header > a {
-  font-size: 1.3em
+  font-size: 1.3em;
+  margin: .2em 0;
 }
 
 article header {
   margin-bottom: 1.5em;
+}
+
+article header h1 {
+  font-size: 2em;
+  margin: 0;
 }
 
 nav {
@@ -156,11 +148,5 @@ body > header, article {
 @media (min-width: 32em) {
   body > header, article {
     padding: 1.5em calc(38% - 12em);
-  }
-}
-
-@media (min-width: 100em) {
-  body > header, article {
-    padding: 1.5em calc(46% - 20em);
   }
 }
