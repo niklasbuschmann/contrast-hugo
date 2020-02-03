@@ -10,10 +10,13 @@
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/index.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/classes.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}fonts/PT-Sans.css">
+{{- if .Site.Params.sidebar }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/sidebar.css" media="screen and (min-width: 70em)">
+{{- end }}
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="alternate" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" title="{{ .Site.Title }}">
-{{- if .Site.Params.FontAwesome }}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
+{{- if .Site.Params.fontawesome }}
+{{ partial "font-awesome.html" . }}
 {{- end }}
 {{- if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
@@ -26,6 +29,7 @@
       <a href="{{ .URL }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a>
     {{ end }}
   </nav>
+  {{ if and .Site.Params.sidebar (isset .Site.Params "description") }}<p>{{ .Site.Params.description }}</p>{{ end }}
 </header>
 
 {{- block "main" . }}{{- end }}

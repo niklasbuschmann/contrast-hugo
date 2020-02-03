@@ -12,11 +12,14 @@
 
 .archive li {
   font-size: 1.1em;
-  margin: .6em 0;
 }
 
 .archive time {
   display: inline-block;
   min-width: 10ch;
   margin: 0 .2em;
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+  margin-right: 1.2em;
 }
