@@ -22,14 +22,11 @@
 {{ partial "math.html" . }}
 {{- end }}
 
-<header class="{{ if .Site.Params.brightheader }}bright{{ else }}dark{{ end }}">
-  <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-  <nav>
-    {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a>
-    {{ end }}
-  </nav>
-  {{ if and .Site.Params.sidebar (isset .Site.Params "description") }}<p>{{ .Site.Params.description }}</p>{{ end }}
+<header class="{{ if .Site.Params.darkheader }}dark{{ end }} {{ if gt (len .Site.Menus) 1 }}full{{ end }}">
+  {{ $url := .RelPermalink }}
+  {{ if not .Site.Params.hidetitle }}<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ end }}
+  {{ range .Site.Menus }}<nav>{{ range . }}<a href="{{ .URL }}" {{ if (eq $url .URL) }}class="selected"{{ end }}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>{{ end }}</nav>{{ end }}
+  {{ with .Site.Params.description }}<div hidden>{{ safeHTML . }}</div>{{ end }}
 </header>
 
 {{- block "main" . }}{{- end }}

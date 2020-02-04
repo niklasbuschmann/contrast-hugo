@@ -49,10 +49,18 @@ article header h1 {
   font-size: 2em;
 }
 
+header [hidden] {
+  display: inline-block;
+}
+
+header > div {
+  margin-top: 3em;
+}
+
 body > header > a {
   display: none;
 }
 
-body > header > p {
-  margin-top: 3em;
+.fa, .fab, .fad, .fal, .far, .fas {
+  margin-right: 1.2em;
 }

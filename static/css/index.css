@@ -12,19 +12,19 @@
   }
 }
 
+html {
+  font-size: 16px;
+  font-size: calc(0.8rem + 0.3vw);
+}
+
 body {
   font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
-  font-size: calc(0.8rem + 0.3vw);
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
 }
 
 b, strong, th {
@@ -130,7 +130,7 @@ article header {
 
 article header h1 {
   font-size: 1.8em;
-  margin: 0;
+  margin: 0 0 .1em;
 }
 
 nav {
@@ -139,6 +139,12 @@ nav {
 
 nav a {
   margin: .4em .8em;
+}
+
+body > header {
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 .6em rgba(28, 29, 34, 0.05);
+  border-bottom: 1px solid rgba(142, 142, 145, 0.16);
 }
 
 body > header, article {
