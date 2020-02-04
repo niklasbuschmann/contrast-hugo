@@ -14,6 +14,16 @@
   margin: 0 .2em;
 }
 
+.full > a {
+  font-size: 1.5em;
+  width: 100%;
+  margin: .1em 0 .6em;
+}
+
+.hidden {
+  display: none;
+}
+
 .fa, .fab, .fad, .fal, .far, .fas {
   margin-right: .6em;
 }

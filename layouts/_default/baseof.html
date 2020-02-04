@@ -7,6 +7,9 @@
 <meta name="description" content="{{ .Description | default .Site.Params.description }}">
 {{- end }}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{- if .Site.Params.fontawesome }}
+{{ partial "font-awesome.html" . }}
+{{- end }}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/index.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/classes.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}fonts/PT-Sans.css">
@@ -15,9 +18,6 @@
 {{- end }}
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="alternate" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" title="{{ .Site.Title }}">
-{{- if .Site.Params.fontawesome }}
-{{ partial "font-awesome.html" . }}
-{{- end }}
 {{- if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
 {{- end }}
@@ -26,7 +26,7 @@
   {{ $url := .RelPermalink }}
   {{ if not .Site.Params.hidetitle }}<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ end }}
   {{ range .Site.Menus }}<nav>{{ range . }}<a href="{{ .URL }}" {{ if (eq $url .URL) }}class="selected"{{ end }}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>{{ end }}</nav>{{ end }}
-  {{ with .Site.Params.description }}<div hidden>{{ safeHTML . }}</div>{{ end }}
+  {{ with .Site.Params.description }}<div class="hidden">{{ safeHTML . }}</div>{{ end }}
 </header>
 
 {{- block "main" . }}{{- end }}
