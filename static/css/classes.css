@@ -1,9 +1,3 @@
-.dark {
-  background: #1e1f25;
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
 .archive li {
   font-size: 1.1em;
 }
@@ -14,16 +8,10 @@
   margin: 0 .2em;
 }
 
-.full > a {
-  font-size: 1.5em;
-  width: 100%;
-  margin: .1em 0 .6em;
-}
-
 .hidden {
   display: none;
 }
 
 .fa, .fab, .fad, .fal, .far, .fas {
-  margin-right: .6em;
+  margin-right: 1.2em;
 }

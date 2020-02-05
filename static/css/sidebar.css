@@ -1,11 +1,10 @@
 body {
-  font-size: 18px;
-  padding: 0 4em;
+  font-size: 1.08em;
   margin-left: 16em;
 }
 
-body > article, body > footer {
-  margin: 0 auto;
+body > article {
+  margin: 0 4em;
   padding: 2em 0;
   max-width: 55em;
 }
@@ -17,7 +16,7 @@ body > header {
   color: #fff;
   border: none;
   box-shadow: none;
-  opacity: .96;
+  opacity: .98;
   margin: 0;
   padding: 2.2em 2em;
   width: 12em;
@@ -37,30 +36,27 @@ nav a {
 }
 
 nav a:hover, nav a.selected {
-  background: #23242a;
+  background: #212228;
   text-decoration: inherit;
 }
 
-nav a svg {
-  margin-right: 1.2em;
+body > header > a {
+  font-family: "PT Serif", Georgia;
+  font-size: 2.2em;
+  display: block;
+  margin: 0 0 1.5rem;
 }
 
 article header h1 {
   font-size: 2em;
 }
 
+header > div {
+  position: absolute;
+  margin: 2em 0;
+  bottom: 0;
+}
+
 .hidden {
   display: inline-block;
-}
-
-header > div {
-  margin-top: 3em;
-}
-
-body > header > a {
-  display: none;
-}
-
-.fa, .fab, .fad, .fal, .far, .fas {
-  margin-right: 1.2em;
 }
