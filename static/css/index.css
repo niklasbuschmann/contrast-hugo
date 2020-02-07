@@ -1,3 +1,18 @@
+@media (min-width: 50em) {
+  @font-face {
+    font-family: 'PT Sans';
+    src: local("PT Sans"), local("PTSans-Regular"), url("../fonts/PTSans-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PT Sans';
+    src: local("PT Sans Bold"), local("PTSans-Bold"), url("../fonts/PTSans-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   html {
     background: #ffffff;
@@ -25,6 +40,10 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
 }
 
 b, strong, th {
@@ -117,6 +136,9 @@ body > header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 .6em rgba(28, 29, 34, 0.05);
+  border-bottom: 1px solid rgba(142, 142, 145, 0.16);
 }
 
 body > header > a {
@@ -141,18 +163,12 @@ nav a {
   margin: .4em .8em;
 }
 
-body > header {
-  background: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 0 .6em rgba(28, 29, 34, 0.05);
-  border-bottom: 1px solid rgba(142, 142, 145, 0.16);
-}
-
-body > header, article {
+body > header, body > article, body > footer {
   padding: 1.5em;
 }
 
 @media (min-width: 32em) {
-  body > header, article {
+  body > header, body > article, body > footer {
     padding: 1.5em calc(38% - 12em);
   }
 }

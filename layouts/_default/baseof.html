@@ -12,7 +12,6 @@
 {{- end }}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/index.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/classes.css">
-<link rel="stylesheet" href="{{ .Site.BaseURL }}fonts/PT-Sans.css">
 {{- if .Site.Params.sidebar }}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/sidebar.css" media="screen and (min-width: 70em)">
 {{- end }}
@@ -28,6 +27,8 @@
   {{ with .Site.Params.description }}<div class="hidden">{{ safeHTML . }}</div>{{ end }}
 </header>
 
+<body>
 {{- block "main" . }}{{- end }}
+</body>
 
 </html>
