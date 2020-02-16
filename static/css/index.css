@@ -73,13 +73,10 @@ hr {
 }
 
 blockquote {
-  background: rgba(142, 142, 145, 0.04);
-  border-left: 3px solid rgba(142, 142, 145, 0.7);
+  background: rgba(142, 142, 145, 0.06);
+  border-left: 3px solid rgba(142, 142, 145, 0.9);
   padding: 1px 1.5em;
-}
-
-blockquote p {
-  opacity: .7;
+  opacity: .75;
 }
 
 blockquote, figure {
@@ -98,15 +95,13 @@ img {
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-spacing: 1px;
+  box-shadow: 0 0 0 1px rgba(142, 142, 145, 0.12) inset;
 }
 
 th, td {
   padding: .5em 1em;
-}
-
-tr {
-  border: 1px solid rgba(142, 142, 145, 0.2);
+  box-shadow: 0 0 0 1px rgba(142, 142, 145, 0.12);
 }
 
 tr:hover, tr:nth-child(odd) td {
@@ -169,6 +164,6 @@ body > header, body > article, body > footer {
 
 @media (min-width: 32em) {
   body > header, body > article, body > footer {
-    padding: 1.5em calc(38% - 12em);
+    padding: 1.75em calc(38% - 12em);
   }
 }

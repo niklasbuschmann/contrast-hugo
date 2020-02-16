@@ -5,9 +5,9 @@ body {
 }
 
 body > article, body > footer {
-  margin: 0 4em;
+  margin: 0 5em;
   padding: 2em 0;
-  max-width: 55em;
+  max-width: 50em;
 }
 
 body > header {
@@ -42,10 +42,9 @@ nav a:hover, nav a.selected {
 }
 
 body > header > a {
-  font-family: "PT Serif", Georgia;
-  font-size: 2.2em;
   display: block;
-  margin: 0 0 .8em;
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }
 
 article header h1 {
