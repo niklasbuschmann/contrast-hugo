@@ -24,9 +24,19 @@
 <body>
 
 <header>
-  {{ if not (gt (len .Site.Menus) 1) }}<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ end }}
-  {{ range .Site.Menus }}<nav>{{ range . }}<a href="{{ .URL }}" {{ if (eq $.RelPermalink .URL) }}class="selected"{{ end }}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>{{ end }}</nav>{{ end }}
-  {{ with .Site.Params.description }}<div class="hidden">{{ safeHTML . }}</div>{{ end }}
+  {{ if not (gt (len .Site.Menus) 1) }}
+    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  {{ end }}
+  {{ range .Site.Menus }}
+    <nav>
+    {{ range . }}
+      <a href="{{ .URL }}" {{ if (eq $.RelPermalink .URL) }}class="selected"{{ end }}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>
+    {{ end }}
+    </nav>
+  {{ end }}
+  {{ with .Site.Params.description }}
+    <div class="hidden description">{{ safeHTML . }}</div>
+  {{ end }}
 </header>
 
 {{- block "main" . }}{{- end }}

@@ -51,10 +51,8 @@ article header h1 {
   font-size: 2em;
 }
 
-header > div {
-  position: absolute;
+.description {
   margin: 2em 0;
-  bottom: 0;
 }
 
 .hidden {

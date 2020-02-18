@@ -22,31 +22,18 @@ An example `config.yaml` section could look like this:
 ```yaml
 params:
   sidebar: true
+  show_excerpts: true
   fontawesome: true
   description: 'Made by <a href="">Blog Author</a>'
 
 menu:
   main:
-  - identifier: "home"
-    name: "Home"
-    url: "/"
-    weight: 1
-    pre: "<span class='fas fa-home hidden'></span>"
-  - identifier: "about"
-    name: "About"
-    url: "/about/"
-    weight: 2
-    pre: "<span class='fas fa-address-card hidden'></span>"
-  - identifier: "github"
-    name: "Github"
-    url: "https://github.com/"
-    weight: 3
-    pre: "<span class='fab fa-github hidden'></span>"
-  - identifier: "feed"
-    name: "Subscribe"
-    url: "/index.xml"
-    weight: 4
-    pre: "<span class='fas fa-rss hidden'></span>"
+  - {name: "Home", url: "/", identifier: "home", weight: 1, pre: "<span class='fas fa-home hidden'></span>"}
+  - {name: "About", url: "/about/", identifier: "address-card", weight: 2, pre: "<span class='fas fa-address-card hidden'></span>"}
+  remote:
+  - {name: "Mail", url: "mailto:", identifier: "envelope", weight: 3, pre: "<span class='fas fa-envelope hidden'></span>"}
+  - {name: "Github", url: "https://github.com/", identifier: "github", weight: 4, pre: "<span class='fab fa-github hidden'></span>"}
+  - {name: "Subscribe", url: "/index.xml", identifier: "rss", weight: 5, pre: "<span class='fas fa-rss hidden'></span>"}
 ```
 
 ## Features
