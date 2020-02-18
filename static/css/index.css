@@ -72,6 +72,10 @@ hr {
   margin: 2em 0;
 }
 
+article:not(:last-child) {
+  border-bottom: 1px solid rgba(142, 142, 145, 0.12);
+}
+
 blockquote {
   background: rgba(142, 142, 145, 0.06);
   border-left: 3px solid rgba(142, 142, 145, 0.9);
@@ -138,7 +142,6 @@ body > header {
 
 body > header > a {
   font-size: 1.3em;
-  margin: .2em 0;
 }
 
 article header {
@@ -151,11 +154,11 @@ article header h1 {
 }
 
 nav {
-  margin: .4em -.8em;
+  margin: .5em -.8em;
 }
 
 nav a {
-  margin: .4em .8em;
+  margin: .5em .8em;
 }
 
 body > header, body > article, body > footer {

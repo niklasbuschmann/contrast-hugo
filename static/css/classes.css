@@ -12,6 +12,23 @@
   display: none;
 }
 
+.more {
+  margin: 2em 0 1em;
+}
+
+.more a {
+  border-radius: 2px;
+  border: 1.5px solid #68f;
+  padding: .4em .8em;
+  transition: .2s;
+}
+
+.more a:hover {
+  color: #fff;
+  background: #68f;
+  text-decoration: inherit;
+}
+
 .fa, .fab, .fad, .fal, .far, .fas {
   margin-right: 1.2em;
 }

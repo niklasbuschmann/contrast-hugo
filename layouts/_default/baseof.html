@@ -21,14 +21,16 @@
 {{ partial "math.html" . }}
 {{- end }}
 
+<body>
+
 <header>
   {{ if not (gt (len .Site.Menus) 1) }}<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ end }}
   {{ range .Site.Menus }}<nav>{{ range . }}<a href="{{ .URL }}" {{ if (eq $.RelPermalink .URL) }}class="selected"{{ end }}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>{{ end }}</nav>{{ end }}
   {{ with .Site.Params.description }}<div class="hidden">{{ safeHTML . }}</div>{{ end }}
 </header>
 
-<body>
 {{- block "main" . }}{{- end }}
+
 </body>
 
 </html>
