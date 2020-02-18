@@ -29,6 +29,11 @@
   text-decoration: inherit;
 }
 
-.fa, .fab, .fad, .fal, .far, .fas {
-  margin-right: 1.2em;
+.icons svg {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  transition: .2s color;
+  vertical-align: middle;
+  margin-bottom: .15em;
 }

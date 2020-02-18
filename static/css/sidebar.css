@@ -51,6 +51,10 @@ article header h1 {
   font-size: 2em;
 }
 
+.icons svg {
+  margin-right: 1rem;
+}
+
 .description {
   margin: 2em 0;
 }

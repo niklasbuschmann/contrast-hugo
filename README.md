@@ -15,7 +15,7 @@ at the top of the file.
 
 ## Sidebar
 
-Instead of the horizontal menu, a sidebar can be enabled with `sidebar: true`. See [here](https://niklasbuschmann.github.io/contrast/) for an example of the sidebar in action. Adding a `hidden` class to the icon tag will hide the icon on mobile devices.
+Instead of the horizontal menu, a sidebar can be enabled with `sidebar: true`. See [here](https://niklasbuschmann.github.io/contrast/) for an example of the sidebar in action.
 
 An example `config.yaml` section could look like this:
 
@@ -23,17 +23,17 @@ An example `config.yaml` section could look like this:
 params:
   sidebar: true
   show_excerpts: true
-  fontawesome: true
   description: 'Made by <a href="">Blog Author</a>'
 
 menu:
   main:
-  - {name: "Home", url: "/", identifier: "home", weight: 1, pre: "<span class='fas fa-home hidden'></span>"}
-  - {name: "About", url: "/about/", identifier: "address-card", weight: 2, pre: "<span class='fas fa-address-card hidden'></span>"}
+  - {name: "Home", url: "/", identifier: "home", weight: 1}
+  - {name: "About", url: "/about/", identifier: "address-card", weight: 2}
   remote:
-  - {name: "Mail", url: "mailto:", identifier: "envelope", weight: 3, pre: "<span class='fas fa-envelope hidden'></span>"}
-  - {name: "Github", url: "https://github.com/", identifier: "github", weight: 4, pre: "<span class='fab fa-github hidden'></span>"}
-  - {name: "Subscribe", url: "/index.xml", identifier: "rss", weight: 5, pre: "<span class='fas fa-rss hidden'></span>"}
+  - {name: "Mail", url: "mailto:", identifier: "envelope", weight: 3}
+  - {name: "Github", url: "https://github.com/", identifier: "github", weight: 4}
+  - {name: "Subscribe", url: "/index.xml", identifier: "rss", weight: 5}
+
 ```
 
 ## Features
