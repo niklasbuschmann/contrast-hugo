@@ -18,8 +18,6 @@
 {{ partial "math.html" . }}
 {{- end }}
 
-{{ $font_awesome := getJSON "themes/contrast-hugo/static/font-awesome/icons.json" }}
-
 <body>
 
 <header class="icons">
@@ -29,7 +27,7 @@
   {{ range $menu, $items := .Site.Menus }}
     <nav>
     {{ range $items }}
-      {{ $icon := index $font_awesome .Identifier }}
+      {{ $icon := index $.Site.Data.fontawesome.icons .Identifier }}
       {{ $svg := $icon.svg.solid | default $icon.svg.regular | default $icon.svg.brands }}
       <a href="{{ .URL }}" {{ if (eq $.RelPermalink .URL) }}class="selected"{{ end }}>
         <span {{ if eq $menu "main" }}class="hidden"{{ end }}>{{ safeHTML $svg.raw }}</span>
