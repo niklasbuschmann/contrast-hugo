@@ -27,11 +27,15 @@
   {{ range $menu, $items := .Site.Menus }}
     <nav>
     {{ range $items }}
-      {{ $icon := index $.Site.Data.fontawesome.icons .Identifier }}
-      {{ $svg := $icon.svg.solid | default $icon.svg.regular | default $icon.svg.brands }}
       <a href="{{ .URL }}" {{ if (eq $.RelPermalink .URL) }}class="selected"{{ end }}>
-        <span {{ if eq $menu "main" }}class="hidden"{{ end }}>{{ safeHTML $svg.raw }}</span>
-        <span {{ if not (eq $menu "main") }}class="hidden"{{ end }}>{{ .Name }}</span>
+        {{ if and .Identifier (index $.Site.Data.fontawesome.icons .Identifier) }}
+          {{ $icon := index $.Site.Data.fontawesome.icons .Identifier }}
+          {{ $svg := $icon.svg.solid | default $icon.svg.regular | default $icon.svg.brands }}
+          <span {{ if eq $menu "main" }}class="hidden"{{ end }}>{{ safeHTML $svg.raw }}</span>
+          <span {{ if not (eq $menu "main") }}class="hidden"{{ end }}>{{ .Name }}</span>
+        {{ else }}
+          {{ .Name }}
+        {{ end }}
       </a>
     {{ end }}
     </nav>
