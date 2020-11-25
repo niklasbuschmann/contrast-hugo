@@ -15,15 +15,23 @@
 
 @media (prefers-color-scheme: light) {
   html {
+    background: #393b45;
+  }
+  body {
     background: #ffffff;
     color: #1c1d22;
+  }
+  body > header {
+    background: #1c1d22;
+    color: #fff;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
+  body {
     background: #1c1d22;
     color: #ffffff;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -37,6 +45,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
+  min-height: 100vh;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -135,13 +144,11 @@ body > header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 0 .6em rgba(28, 29, 34, 0.05);
-  border-bottom: 1px solid rgba(142, 142, 145, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 body > header > a {
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 
 article header {
@@ -165,8 +172,11 @@ body > header, body > article, body > footer {
   padding: 1.5em;
 }
 
-@media (min-width: 32em) {
+@media (min-width: 36em) {
+  body {
+    margin: 0 calc(38% - 18em);
+  }
   body > header, body > article, body > footer {
-    padding: 1.75em calc(38% - 12em);
+    padding: 1.7em 12.5%;
   }
 }
