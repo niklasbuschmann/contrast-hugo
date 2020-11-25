@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+  font-family: "PT Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
@@ -165,7 +165,7 @@ body > header, body > article, body > footer {
   }
 }
 
-@media (prefers-color-scheme: light) and (min-width: 36em) {
+@media (prefers-color-scheme: light) and (min-width: 44em) {
   html {
     background: #393b45;
     padding: 0 calc(38% - 18em);
