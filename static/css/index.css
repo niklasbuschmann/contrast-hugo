@@ -51,10 +51,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-}
-
 b, strong, th {
   font-weight: 600;
 }
@@ -79,10 +75,6 @@ header time {
 hr {
   border: 1px solid rgba(142, 142, 145, 0.3);
   margin: 2em 0;
-}
-
-article:not(:last-child) {
-  border-bottom: 1px solid rgba(142, 142, 145, 0.12);
 }
 
 blockquote {
