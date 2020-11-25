@@ -23,7 +23,7 @@
   }
   body > header {
     background: #1c1d22;
-    color: #fff;
+    color: #ffffff;
   }
 }
 
@@ -122,7 +122,8 @@ tr:hover, tr:nth-child(odd) td {
 }
 
 pre {
-  background: rgba(142, 142, 145, 0.12);
+  background: rgba(40, 41, 48, 0.9)!important;
+  color: #ffffff;
   border-radius: 2px;
   font-size: .8em;
   margin: 1.5em 0;
