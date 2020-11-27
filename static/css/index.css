@@ -17,7 +17,7 @@ html {
   background: #363846;
   font-size: 16px;
   font-size: calc(0.8rem + 0.3vw);
-  padding: 0 calc(38% - 18em);
+  padding: 0 calc(38% - 20em);
 }
 
 body {
@@ -25,7 +25,7 @@ body {
   font-weight: 400;
   background: #ffffff;
   color: #17181e;
-  box-shadow: 0 0 0 1px rgba(54, 56, 70, 0.4);
+  box-shadow: 0 0 0 1px rgba(54, 56, 70, 0.6);
   margin: 0;
   line-height: 1.6;
   min-height: 100vh;
@@ -122,7 +122,7 @@ body > header {
   align-items: center;
   background: #17181e;
   color: #ffffff;
-  border-bottom: 1px solid rgba(54, 56, 70, 0.4);
+  border-bottom: 1px solid rgba(54, 56, 70, 0.6);
 }
 
 body > header > a {
@@ -152,7 +152,7 @@ body > header, body > article, body > footer {
 
 @media (min-width: 40em) {
   body > header, body > article, body > footer {
-    padding: 1.65em 12.5%;
+    padding: 1.65em calc(20% - 4em);
   }
 }
 
