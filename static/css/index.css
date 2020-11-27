@@ -14,7 +14,7 @@
 }
 
 html {
-  background: #363846;
+  background: #3c3e49;
   font-size: 16px;
   font-size: calc(0.8rem + 0.3vw);
   padding: 0 calc(38% - 20em);
@@ -24,8 +24,8 @@ body {
   font-family: "PT Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
   font-weight: 400;
   background: #ffffff;
-  color: #17181e;
-  box-shadow: 0 0 0 1px rgba(54, 56, 70, 0.6);
+  color: #1c1d22;
+  box-shadow: 0 0 0 1px rgba(60, 62, 73, 0.6);
   margin: 0;
   line-height: 1.6;
   min-height: 100vh;
@@ -56,13 +56,13 @@ header time {
 }
 
 hr {
-  border: 1px solid rgba(139, 140, 143, 0.3);
+  border: 1px solid rgba(142, 142, 145, 0.3);
   margin: 2em 0;
 }
 
 blockquote {
-  background: rgba(139, 140, 143, 0.06);
-  border-left: 3px solid rgba(139, 140, 143, 0.9);
+  background: rgba(142, 142, 145, 0.06);
+  border-left: 3px solid rgba(142, 142, 145, 0.9);
   padding: 1px 1.5em;
   opacity: .75;
 }
@@ -84,20 +84,20 @@ img {
 table {
   width: 100%;
   border-spacing: 1px;
-  box-shadow: 0 0 0 1px rgba(139, 140, 143, 0.12) inset;
+  box-shadow: 0 0 0 1px rgba(142, 142, 145, 0.12) inset;
 }
 
 th, td {
   padding: .5em 1em;
-  box-shadow: 0 0 0 1px rgba(139, 140, 143, 0.12);
+  box-shadow: 0 0 0 1px rgba(142, 142, 145, 0.12);
 }
 
 tr:hover, tr:nth-child(odd) td {
-  background: rgba(139, 140, 143, 0.04);
+  background: rgba(142, 142, 145, 0.04);
 }
 
 pre {
-  background: rgba(34, 36, 44, 0.9)!important;
+  background: rgba(40, 41, 48, 0.9)!important;
   color: #ffffff;
   border-radius: 2px;
   font-size: .8em;
@@ -108,7 +108,7 @@ pre {
 
 :not(pre) > code {
   font-size: .9em;
-  background: rgba(139, 140, 143, 0.15);
+  background: rgba(142, 142, 145, 0.15);
   opacity: .7;
   border-radius: 2px;
   margin: 0 .1em;
@@ -120,9 +120,9 @@ body > header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: #17181e;
+  background: #1c1d22;
   color: #ffffff;
-  border-bottom: 1px solid rgba(54, 56, 70, 0.6);
+  border-bottom: 1px solid rgba(60, 62, 73, 0.6);
 }
 
 body > header > a {
@@ -147,18 +147,18 @@ nav a {
 }
 
 body > header, body > article, body > footer {
-  padding: 1.5em;
+  padding: 1.65em calc(20% - 4em);
 }
 
-@media (min-width: 40em) {
+@media (max-width: 36em) {
   body > header, body > article, body > footer {
-    padding: 1.65em calc(20% - 4em);
+    padding: 1.5em;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   html, body {
-    background: #17181e;
+    background: #1c1d22;
     color: #ffffff;
   }
 }
