@@ -12,7 +12,7 @@
 }
 
 html {
-  background: #565968;
+  background: #66697c;
   font-size: 16px;
   font-size: calc(0.8rem + 0.3vw);
   padding: 0 calc(38% - 20em);
@@ -23,20 +23,13 @@ body {
   font-weight: 400;
   background: #ffffff;
   color: #1c1d22;
-  box-shadow: 0 0 0 1px rgba(86, 89, 104, 0.3);
+  box-shadow: 0 0 0 1px rgba(102, 105, 124, 0.3);
   margin: 0;
   line-height: 1.6;
   min-height: 100vh;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (prefers-color-scheme: dark) {
-  html, body {
-    background: #1c1d22;
-    color: #ffffff;
-  }
 }
 
 b, strong, th {
@@ -125,7 +118,7 @@ body > header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: #1c1d22;
+  background: #2a2c33;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -154,4 +147,11 @@ nav a {
 body > header, body > article {
   padding: 1.65em calc(20% - 4em);
   padding: 1.65em max(calc(20% - 4em), 1.5em);
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body, body > header {
+    background: #1c1d22;
+    color: #ffffff;
+  }
 }
