@@ -22,6 +22,7 @@ theme = "contrast-hugo"
 
 [params]
   minimal = false
+  excerpts = false
   description = "my blog"
 
 [menu]
