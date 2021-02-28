@@ -136,11 +136,11 @@ article header h1 {
 }
 
 nav {
-  margin: .5em -.8em;
+  margin: .5em -1em;
 }
 
 nav a {
-  margin: .5em .8em;
+  margin: .5em 1em;
 }
 
 body > header, body > article {
