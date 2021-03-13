@@ -12,9 +12,9 @@
 }
 
 html {
+  background: #d3d4db;
   font-size: 16px;
   font-size: calc(0.8rem + 0.3vw);
-  background: #66697c;
   padding: 0 calc(38% - 21em);
 }
 
@@ -26,6 +26,7 @@ body {
   line-height: 1.6;
   margin: 0;
   min-height: 100vh;
+  box-shadow: 0 0 0.3em #c5c7cf;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -130,7 +131,7 @@ body > header, body > footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background: #2a2c33;
+  background: #2d2e36;
   color: #ffffff;
 }
 
