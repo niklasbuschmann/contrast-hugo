@@ -15,6 +15,9 @@
 <script defer src="{{ .Site.BaseURL }}katex/katex.min.js"></script>
 <script defer src="{{ .Site.BaseURL }}katex/contrib/auto-render.min.js" onload="renderMathInElement(document.body)"></script>
 {{- end }}
+{{- if .Params.mermaid }}
+<script defer src="https://unpkg.com/mermaid@8.4.0/dist/mermaid.min.js"></script>
+{{ end }}
 
 <header>
   {{ if not (gt (len .Site.Menus) 1) }}
