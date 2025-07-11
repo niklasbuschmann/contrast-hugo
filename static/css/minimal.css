@@ -197,12 +197,28 @@ body > footer {
 
 .archive {
   font-size: 1.1em;
+  list-style-type: none;
+  padding: 0;
 }
-
+.archive li {
+  border-bottom: 1px dashed rgba(144, 145, 148, 0.8);
+  margin: 0;
+  padding: .4em 0;
+}
+.archive li:last-of-type { 
+  border-bottom: none;
+}
+.archive a {
+  font-weight: 600;
+  color: inherit;
+  transition: .2s color;
+}
+.archive a:hover {
+  color: #57f;
+  text-decoration: none;
+}
 .archive time {
-  display: inline-block;
-  min-width: 10ch;
-  margin: 0 0.2em;
+  margin-right: .6em;
 }
 
 .highlight pre {
