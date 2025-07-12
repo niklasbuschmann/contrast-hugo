@@ -11,17 +11,13 @@
   font-style: normal;
 }
 
-html {
-  font-size: 16px;
-  font-size: calc(0.8rem + 0.3vw);
-}
-
 body {
   background: #ffffff;
   color: #212228;
   font-family: "PT Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  font-size: calc(0.8rem + 0.2vw);
   margin: 0;
   min-height: 100vh;
   -webkit-text-size-adjust: 100%;
@@ -222,7 +218,7 @@ body > footer {
 }
 
 .highlight pre {
-  background: rgba(47, 48, 57, 0.9)!important;
+  background: rgba(47, 48, 57, 0.95)!important;
   color: white!important;
 }
 
