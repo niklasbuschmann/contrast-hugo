@@ -10,14 +10,13 @@
   font-weight: bold;
   font-style: normal;
 }
-
 body {
   background: #ffffff;
-  color: #212228;
+  color: #111218;
   font-family: "PT Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
   font-weight: 400;
-  line-height: 1.6;
   font-size: calc(0.8rem + 0.2vw);
+  line-height: 1.6;
   margin: 0;
   min-height: 100vh;
   -webkit-text-size-adjust: 100%;
@@ -27,11 +26,10 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #212228;
+    background: #111218;
     color: #ffffff;
   }
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
@@ -45,7 +43,7 @@ p {
 }
 
 a {
-  color: #68f;
+  color: #57f;
   text-decoration: inherit;
 }
 a:hover {
@@ -57,21 +55,21 @@ header a, footer a, aside a {
 }
 
 header time {
-  color: #909194;
+  color: rgb(136, 136.5, 139.5);
 }
 
 hr {
-  border: 1px solid rgba(144, 145, 148, 0.3);
+  border: 1px dashed;
   margin: 2em 0;
 }
 
 article:not(:last-of-type) {
-  border-bottom: 1.5px solid rgba(144, 145, 148, 0.2);
+  border-bottom: 1px solid rgba(136, 136.5, 139.5, 0.14);
 }
 
 blockquote {
-  background: rgba(144, 145, 148, 0.06);
-  border-left: 3px solid rgba(144, 145, 148, 0.9);
+  background: rgba(136, 136.5, 139.5, 0.09);
+  border-left: 3px solid rgba(136, 136.5, 139.5, 0.9);
   padding: 1px 1.5em;
   opacity: 0.75;
 }
@@ -80,8 +78,12 @@ blockquote, figure {
   margin: 1em 0;
 }
 
-img, li {
+img {
   margin: 0.5em 0;
+}
+
+li {
+  margin: 0.25em 0;
 }
 
 img {
@@ -96,20 +98,20 @@ table {
   overflow-y: scroll;
   border-spacing: 1px;
   border-radius: 2px;
-  box-shadow: 0 0 0 1px rgba(144, 145, 148, 0.12) inset;
+  box-shadow: 0 0 0 1px rgba(136, 136.5, 139.5, 0.12) inset;
 }
 
 th, td {
   padding: 0.5em 1em;
-  box-shadow: 0 0 0 1px rgba(144, 145, 148, 0.12);
+  box-shadow: 0 0 0 1px rgba(136, 136.5, 139.5, 0.12);
 }
 
 tr:hover, tr:nth-child(odd) td {
-  background: rgba(144, 145, 148, 0.04);
+  background: rgba(136, 136.5, 139.5, 0.04);
 }
 
 pre {
-  background: rgba(144, 145, 148, 0.12);
+  background: rgba(136, 136.5, 139.5, 0.12);
   border-radius: 2px;
   font-size: 0.8em;
   margin: 1.5em 0;
@@ -119,11 +121,20 @@ pre {
 
 :not(pre) > code {
   font-size: 0.9em;
-  background: rgba(144, 145, 148, 0.15);
+  background: rgba(136, 136.5, 139.5, 0.15);
   opacity: 0.7;
   border-radius: 2px;
   margin: 0 0.1em;
   padding: 0.2em 0.4em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  flex-grow: 1;
 }
 
 body > header, body > footer {
@@ -147,31 +158,15 @@ article header h1 {
 }
 
 nav {
-  margin: 0.5em -1em;
+  margin: 0.5em -1.2em;
 }
 
 nav a {
-  margin: 0.5em 1em;
-}
-
-body > header {
-  box-shadow: 0 0 .6em rgba(33, 34, 40 ,0.04);
-  border-bottom: 1px solid rgba(144, 145, 148, 0.14);
-}
-
-body > footer {
-  box-shadow: 0 0 .6em rgba(33, 34, 40 ,0.04) inset;
-  border-top: 1px solid rgba(144, 145, 148, 0.14);
-}
-
-@media (min-width: 38em) {
-  body > header, body > article, body > footer {
-    padding: 1.7em calc(38% - 14em);
-  }
+  margin: 0.5em 1.2em;
 }
 
 .title {
-  font-size: 1.3em;
+  font-size: 1.25em;
 }
 
 .more {
@@ -180,14 +175,14 @@ body > footer {
 
 .more a {
   border-radius: 2px;
-  border: 1.5px solid #68f;
+  border: 1.5px solid #57f;
   padding: 0.4em 0.8em;
   transition: 0.2s background, 0.2s color;
 }
 
 .more a:hover {
   color: #fff;
-  background: #68f;
+  background: #57f;
   text-decoration: inherit;
 }
 
@@ -196,33 +191,63 @@ body > footer {
   list-style-type: none;
   padding: 0;
 }
+
 .archive li {
-  border-bottom: 1px dashed rgba(144, 145, 148, 0.8);
+  border-bottom: 1px dashed rgba(136, 136.5, 139.5, 0.8);
   margin: 0;
-  padding: .4em 0;
+  padding: 0.4em 0;
 }
-.archive li:last-of-type { 
+
+.archive li:last-of-type {
   border-bottom: none;
 }
+
 .archive a {
   font-weight: 600;
   color: inherit;
-  transition: .2s color;
+  transition: 0.2s color;
 }
+
 .archive a:hover {
   color: #57f;
   text-decoration: none;
 }
+
 .archive time {
-  margin-right: .6em;
+  margin-right: 0.6em;
 }
 
-.highlight pre {
-  background: rgba(47, 48, 57, 0.95)!important;
-  color: white!important;
+a:hover .icon {
+  color: rgb(136, 136.5, 139.5);
 }
 
 .katex {
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+.highlight pre {
+  background: rgba(29.687804878, 31.4341463415, 41.912195122, 0.95)!important;
+  color: #ffffff;
+}
+
+@media (min-width: 40em) {
+  body > header, body > article, body > footer {
+    padding: 1.75em calc(40% - 17em);
+  }
+}
+@media (prefers-color-scheme: light) {
+  body > header {
+    background: rgb(38.1463414634, 40.3902439024, 53.8536585366);
+    color: #ffffff;
+  }
+}
+body > header {
+  border-bottom: 1px solid rgba(136, 136.5, 139.5, 0.14);
+}
+
+body > footer {
+  box-shadow: 0 0 0.6em rgba(17, 18, 24, 0.04) inset;
+  border-top: 1px solid rgba(136, 136.5, 139.5, 0.14);
+  opacity: 0.9;
 }
