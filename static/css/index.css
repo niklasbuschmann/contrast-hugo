@@ -17,8 +17,6 @@ body {
   font-weight: 400;
   font-size: calc(0.8rem + 0.2vw);
   line-height: 1.6;
-  margin: 0;
-  min-height: 100vh;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,7 +41,7 @@ p {
 }
 
 a {
-  color: #57f;
+  color: #46f;
   text-decoration: inherit;
 }
 a:hover {
@@ -54,7 +52,7 @@ header a, footer a, aside a {
   color: inherit;
 }
 
-header time {
+time {
   color: rgb(136, 136.5, 139.5);
 }
 
@@ -95,19 +93,18 @@ img {
 table {
   display: inline-block;
   max-width: 100%;
-  overflow-y: scroll;
-  border-spacing: 1px;
+  overflow-y: auto;
+  border-collapse: collapse;
   border-radius: 2px;
-  box-shadow: 0 0 0 1px rgba(136, 136.5, 139.5, 0.12) inset;
 }
 
 th, td {
   padding: 0.5em 1em;
-  box-shadow: 0 0 0 1px rgba(136, 136.5, 139.5, 0.12);
+  border: 1px solid rgba(136, 136.5, 139.5, 0.24);
 }
 
-tr:hover, tr:nth-child(odd) td {
-  background: rgba(136, 136.5, 139.5, 0.04);
+thead, tr:hover td, tr:hover th {
+  background: rgba(136, 136.5, 139.5, 0.12);
 }
 
 pre {
@@ -131,10 +128,13 @@ pre {
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
 }
 
-article {
+body > header, body > article, body > footer {
   flex-grow: 1;
+  padding: 1.5em;
 }
 
 body > header, body > footer {
@@ -142,10 +142,7 @@ body > header, body > footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-}
-
-body > header, body > article, body > footer {
-  padding: 1.5em;
+  flex-grow: 0;
 }
 
 article header {
@@ -175,14 +172,14 @@ nav a {
 
 .more a {
   border-radius: 2px;
-  border: 1.5px solid #57f;
+  border: 1.5px solid #46f;
   padding: 0.4em 0.8em;
   transition: 0.2s background, 0.2s color;
 }
 
 .more a:hover {
   color: #fff;
-  background: #57f;
+  background: #46f;
   text-decoration: inherit;
 }
 
@@ -193,32 +190,40 @@ nav a {
 }
 
 .archive li {
-  border-bottom: 1px dashed rgba(136, 136.5, 139.5, 0.8);
   margin: 0;
   padding: 0.4em 0;
 }
 
-.archive li:last-of-type {
-  border-bottom: none;
+.archive li:not(:last-of-type) {
+  border-bottom: 1.5px dashed rgba(136, 136.5, 139.5, 0.25);
 }
 
 .archive a {
   font-weight: 600;
   color: inherit;
   transition: 0.2s color;
+  margin-left: 0.75em;
 }
 
 .archive a:hover {
-  color: #57f;
+  color: #46f;
   text-decoration: none;
 }
 
-.archive time {
-  margin-right: 0.6em;
+.icon {
+  height: 1.05em;
+  width: 1.05em;
+  fill: currentColor;
+  transition: 0.2s color;
+  vertical-align: middle;
 }
 
 a:hover .icon {
   color: rgb(136, 136.5, 139.5);
+}
+
+.gist th, .gist td {
+  border: none;
 }
 
 .katex {
@@ -227,8 +232,8 @@ a:hover .icon {
 }
 
 .highlight pre {
-  background: rgba(29.687804878, 31.4341463415, 41.912195122, 0.95)!important;
-  color: #ffffff;
+  background: rgba(33.9170731707, 35.912195122, 47.8829268293, 0.9)!important;
+  color: #ffffff!important;
 }
 
 html {
@@ -237,7 +242,7 @@ html {
 }
 
 body {
-  box-shadow: 0 0 1em rgb(219.2926829268, 220.7804878049, 229.7073170732);
+  box-shadow: 0 0 1em rgba(136, 136.5, 139.5, 0.15);
 }
 
 body > header, body > footer {
@@ -258,6 +263,6 @@ body > header, body > footer {
     background: #111218;
   }
   body, body > header, body > footer {
-    box-shadow: 0 0 0 2px rgb(33.9170731707, 35.912195122, 47.8829268293);
+    box-shadow: 0 0 0 2px rgba(136, 136.5, 139.5, 0.22);
   }
 }
