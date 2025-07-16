@@ -246,6 +246,10 @@ a:hover .icon {
   overflow-y: hidden;
 }
 
+.highlight pre {
+  background: rgba(33.9170731707, 35.912195122, 47.8829268293, 0.9)!important;
+}
+
 html {
   background: rgb(237.2048780488, 237.9463414634, 242.3951219512);
   padding: 0 calc(38% - 22em);
