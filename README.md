@@ -21,7 +21,6 @@ author = "David Wallace"
 theme = "contrast-hugo"
 
 [params]
-  minimal = false
   excerpts = false
   description = "my blog"
 

@@ -271,12 +271,10 @@ body > header, body > footer {
 }
 @media (prefers-color-scheme: dark) {
   html {
-    background: rgb(10.656097561, 11.2829268293, 15.043902439);
+    background: rgb(21.2292682927, 22.4780487805, 29.9707317073);
   }
-  body > header, body > footer {
-    background: #111218;
-  }
-  body, body > header, body > footer {
-    box-shadow: 0 0 0 2px rgb(33.9170731707, 35.912195122, 47.8829268293);
+  body, body > header, body > footer, body > article {
+    background: rgb(25.4585365854, 26.956097561, 35.9414634146);
+    box-shadow: 0 0 0 1px rgb(42.3756097561, 44.8682926829, 59.8243902439);
   }
 }
