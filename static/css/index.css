@@ -250,7 +250,7 @@ body > header, body > footer {
 }
 
 @media (prefers-color-scheme: dark) {
-  body, body > header, body > footer {
+  body, body > header, body > footer, body > article {
     background: rgb(29.687804878, 31.4341463415, 41.912195122);
     color: #ffffff;
     box-shadow: 0 0 0 1px rgb(63.5219512195, 67.2585365854, 89.6780487805);
