@@ -83,7 +83,7 @@ hr {
   margin: 2em 0;
 }
 
-article:not(:last-of-type) {
+article {
   border-bottom: 1px solid rgba(136, 136.5, 139.5, 0.18);
 }
 
@@ -244,32 +244,29 @@ a:hover .icon {
   background: rgb(48.7195121951, 51.5853658537, 68.7804878049)!important;
 }
 
-body > header, body > footer {
-  background: rgb(42.3756097561, 44.8682926829, 59.8243902439);
-  color: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  body, body > header, body > footer, body > article {
-    background: rgb(29.687804878, 31.4341463415, 41.912195122);
-    color: #ffffff;
-    box-shadow: 0 0 0 1px rgb(63.5219512195, 67.2585365854, 89.6780487805);
-  }
-}
-@media (prefers-color-scheme: light) {
-  html {
-    background: rgb(237.2048780488, 237.9463414634, 242.3951219512);
-  }
-  body {
-    box-shadow: 0 0 1em rgba(136, 136.5, 139.5, 0.15);
-  }
-}
 html {
+  background: rgb(237.2048780488, 237.9463414634, 242.3951219512);
   padding: 0 calc(38% - 22em);
 }
 
 @media (min-width: 32em) {
   body > * {
     padding: 1.75em calc(22% - 6em);
+  }
+}
+body {
+  box-shadow: 0 0 1em rgba(136, 136.5, 139.5, 0.15);
+}
+
+body > header, body > footer {
+  background: rgb(42.3756097561, 44.8682926829, 59.8243902439);
+  color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body, body > header, body > footer, body > article {
+    background: rgb(29.687804878, 31.4341463415, 41.912195122);
+    color: #ffffff;
+    box-shadow: 0 0 0 1px rgb(63.5219512195, 67.2585365854, 89.6780487805);
   }
 }
