@@ -8,4 +8,17 @@
   {{ .Content }}
 </article>
 
+{{ $Pages := .CurrentSection.Pages.ByWeight.Reverse }}
+<footer class="gray">
+{{ with $Pages.Prev . }}
+  <a href="{{ .RelPermalink }}">«&numsp;{{ .Title }}</a>&numsp;
+{{ else }}
+  <span></span>
+{{ end }}
+{{ with $Pages.Next . }}
+  &numsp;<a href="{{ .RelPermalink }}">{{ .Title }}&numsp;»</a>
+{{ else }}
+  <span></span>
+{{ end }}
+</footer>
 {{ end }}

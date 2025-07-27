@@ -13,31 +13,19 @@ Second, specify `contrast-hugo` as your default theme in the `config.toml` file.
 
 at the top of the file.
 
-### Example config
+An example `hugo.yaml` could look like this:
+
+```yaml
+params:
+  excerpts: true
+
+menu:
+  main:
+  - {name: "Home", url: "/", identifier: "home", weight: 1}
+  - {name: "About", url: "/about/", identifier: "address-card", weight: 2}
+  social:
+  - {name: "Mail", url: "mailto:", identifier: "envelope", weight: 3}
+  - {name: "Github", url: "https://github.com/", identifier: "github", weight: 4}
+  - {name: "Subscribe", url: "/index.xml", identifier: "rss", weight: 5}
 
 ```
-title = "Davids Blog"
-author = "David Wallace"
-theme = "contrast-hugo"
-
-[params]
-  excerpts = false
-  description = "my blog"
-
-[menu]
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 10
-```
-
-## Based on
-
-- [Hyde](https://github.com/poole/hyde)
-- [Minima](https://github.com/jekyll/minima)
-- [KaTeX](https://katex.org/)
-
-## License
-
-[public domain](http://unlicense.org/)

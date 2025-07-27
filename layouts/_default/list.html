@@ -15,16 +15,14 @@
     {{ if .Date }}<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 02, 2006" }}</time>{{ end }}
   </header>
   {{ .Summary }}
-  {{- if .Truncated }}
-    <div class="more"><a href="{{ .RelPermalink }}">read more</a></div>
-  {{- end }}
+  {{- if .Truncated }}<div class="more"><a href="{{ .RelPermalink }}">read more</a></div>{{- end }}
 </article>
 {{- end }}
 
 {{ else }}
 
 <article>
-  <header class="meta"><h1>{{ .Title | default "Posts" | humanize }}</h1></header>
+  <header class="meta"><h1>Posts</h1></header>
   <ul class="archive">
     {{- range $Pages }}
     <li>
