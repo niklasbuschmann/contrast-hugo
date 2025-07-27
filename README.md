@@ -21,8 +21,8 @@ params:
 
 menu:
   main:
-  - {name: "Home", url: "/", identifier: "home", weight: 1}
-  - {name: "About", url: "/about/", identifier: "address-card", weight: 2}
+  - {name: "Home", url: "/", weight: 1}
+  - {name: "About", url: "/about/", weight: 2}
   social:
   - {name: "Mail", url: "mailto:", identifier: "envelope", weight: 3}
   - {name: "Github", url: "https://github.com/", identifier: "github", weight: 4}
