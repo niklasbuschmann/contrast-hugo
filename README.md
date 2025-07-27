@@ -7,17 +7,19 @@ To install Contrast as your default theme, first install this repository in the 
     $ cd themes/
     $ git clone https://github.com/niklasbuschmann/contrast-hugo.git
 
-Second, specify `contrast-hugo` as your default theme in the `config.toml` file. Just add the line
+Second, specify `contrast-hugo` as your default theme in the `hugo.yaml` file. Just add the line
 
-    theme = "contrast-hugo"
+    theme: "contrast-hugo"
 
 at the top of the file.
 
 An example `hugo.yaml` could look like this:
 
 ```yaml
+theme: "contrast-hugo"
+
 params:
-  excerpts: true
+  excerpts: false
 
 menu:
   main:
