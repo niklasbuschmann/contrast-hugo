@@ -10,6 +10,9 @@
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/index.css">
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="alternate" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" title="{{ .Site.Title }}">
+{{ if .Page.Store.Get "hasMath" }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}katex/katex.min.css">
+{{- end }}
 {{- if or .Params.math .Site.Params.math }}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}katex/katex.min.css">
 <script defer src="{{ .Site.BaseURL }}katex/katex.min.js"></script>
@@ -30,7 +33,7 @@
       {{ if and .Identifier (index $data .Identifier) }}
         {{ $icon := index $data .Identifier }}
         {{ $svg := $icon.svg.solid | default $icon.svg.regular | default $icon.svg.brands }}
-        <a href="{{ .URL }}" class="icon">{{ safeHTML $svg.raw }}</a>
+        <a href="{{ .URL }}" class="icon" aria-label="{{ .Name }}"><span>{{ safeHTML $svg.raw }}</span></a>
       {{ else }}
         <a href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
