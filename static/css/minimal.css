@@ -56,7 +56,7 @@
 }
 body {
   font-family: "PT Sans", sans-serif;
-  font-size: calc(0.8rem + 0.2vw);
+  font-size: calc(0.85rem + 0.2vw);
   line-height: 1.6;
 }
 
@@ -65,7 +65,7 @@ p {
 }
 
 a {
-  color: #46f;
+  color: #f08;
   text-decoration: inherit;
   transition: 0.2s;
 }
@@ -184,104 +184,30 @@ article > header h1 {
   margin: 0;
 }
 
-.full {
-  font-size: 1.5em;
-  width: 100%;
-  margin: 0.1em 0 0.75em;
-}
-
-.meta, .archive, h1, h2, h3, h4, h5, h6 {
-  -webkit-font-smoothing: antialiased;
-}
-
-.meta time {
-  opacity: 0.6;
-}
-
-.more {
-  margin: 2em 0 1em;
-}
-
-.more a, .gray a {
-  border-radius: 4px;
-  padding: 0.4em 0.8em;
-}
-
-.more a {
-  border: 1.5px solid #46f;
-}
-.more a:hover {
-  color: #ffffff;
-  background: #46f;
-}
-
-.gray {
-  flex-wrap: nowrap;
-}
-.gray a {
-  background: rgba(136, 136.5, 139.5, 0.2);
-}
-.gray a:hover {
-  background: #ffffff;
-  color: #111218;
-}
-
-.archive {
-  font-size: 1.1em;
-  list-style-type: none;
-  padding: 0;
-}
-.archive li {
-  margin: 0.6em 0;
-}
-.archive a {
-  color: inherit;
-}
-.archive a:hover {
-  color: #46f;
-}
-
-.icon a:hover {
-  color: rgb(136, 136.5, 139.5);
-}
-
-.icon a:hover, .more a:hover, .gray a:hover, .archive a:hover {
-  text-decoration: inherit;
-}
-
-.katex-display {
-  overflow: auto hidden;
-}
-
 .highlight pre {
   background: rgb(48.7195121951, 51.5853658537, 68.7804878049)!important;
 }
 
+body {
+  display: block;
+  padding: 0 calc(40% - 16rem);
+}
+
 body > * {
-  background: #ffffff;
-  color: #111218;
-  box-shadow: 0 0 1em rgba(136, 136.5, 139.5, 0.1), 0 -1px rgba(136, 136.5, 139.5, 0.1);
-  padding: 1.5em;
+  margin: 2em 1.5em;
 }
 
 body > header, body > footer {
-  background: rgb(42.3756097561, 44.8682926829, 59.8243902439);
-  color: #ffffff;
+  font-weight: bold;
+}
+body > header a:hover, body > footer a:hover {
+  color: #f08;
+  text-decoration: none;
 }
 
-@media (min-width: 40em) {
-  body {
-    background: rgb(234.2195121951, 235.0853658537, 240.2804878049);
-    padding: 0 calc(38% - 22rem);
-  }
-  body > * {
-    padding: 1.75em calc(22% - 6rem);
-  }
-}
 @media (prefers-color-scheme: dark) {
-  body, body > header, body > footer, body > * {
-    background: rgb(29.687804878, 31.4341463415, 41.912195122);
+  body {
+    background: rgb(25.4585365854, 26.956097561, 35.9414634146);
     color: #ffffff;
-    box-shadow: 0 0 0 1px rgb(63.5219512195, 67.2585365854, 89.6780487805);
   }
 }
