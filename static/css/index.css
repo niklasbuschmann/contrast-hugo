@@ -67,6 +67,7 @@ p {
 a {
   color: #46f;
   text-decoration: inherit;
+  transition: 0.2s;
 }
 a:hover {
   text-decoration: underline;
@@ -148,44 +149,46 @@ body {
   margin: 0;
   -webkit-text-size-adjust: 100%;
 }
-body > article {
-  flex-grow: 1;
-}
+
 body > header, body > footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
-body > header nav, body > footer nav {
+
+body > header > a {
+  font-size: 1.25em;
+}
+
+nav {
   margin: 0.5em -1.3em;
 }
-body > header nav a, body > footer nav a {
+nav > a {
   display: inline-block;
   margin: 0 1.3em;
 }
 
-.title {
-  font-size: 1.25em;
+article {
+  flex-grow: 1;
+}
+article > header h1 {
+  font-size: 1.8em;
+  margin: 0;
 }
 
 .full {
   font-size: 1.5em;
   width: 100%;
-  margin: .1em 0 .75em;
+  margin: 0.1em 0 0.75em;
 }
 
 .meta, .archive, h1, h2, h3, h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
 }
 
-.meta h1 {
-  font-size: 1.8em;
-  margin: 0;
-}
-
-.meta time, .archive time {
-  color: rgb(136, 136.5, 139.5);
+.meta time {
+  opacity: 0.6;
 }
 
 .more {
@@ -195,10 +198,6 @@ body > header nav a, body > footer nav a {
 .more a, .gray a {
   border-radius: 4px;
   padding: 0.4em 0.8em;
-  transition: 0.2s background, 0.2s color;
-}
-.more a:hover, .gray a:hover {
-  text-decoration: inherit;
 }
 
 .more a {
@@ -231,23 +230,24 @@ body > header nav a, body > footer nav a {
 .archive a {
   font-weight: 600;
   color: inherit;
-  transition: 0.2s color;
-  margin-left: 0.75em;
 }
 .archive a:hover {
   color: #46f;
-  text-decoration: none;
 }
 
 .icon svg {
-  height: 1.05em;
-  width: 1.05em;
+  font-size: 1.1em;
+  vertical-align: text-bottom;
+  width: 1em;
+  height: 1em;
   fill: currentColor;
-  transition: 0.2s color;
-  vertical-align: middle;
 }
-.icon:hover {
+.icon a:hover {
   color: rgb(136, 136.5, 139.5);
+}
+
+.icon a:hover, .more a:hover, .gray a:hover, .archive a:hover {
+  text-decoration: inherit;
 }
 
 .katex-display {
