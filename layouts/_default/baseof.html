@@ -20,7 +20,7 @@
 {{- end }}
 
 <header>
-  <a href="{{ .Site.BaseURL }}" class="title {{ if gt (len .Site.Menus) 1 }}full{{ end }}">{{ .Site.Title }}</a>
+  <h1 class="{{ if gt (len .Site.Menus) 1 }}full{{ end }}"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
   {{ $data := dict }}
   {{ with resources.Get "fontawesome/icons.json" }}
     {{ with . | transform.Unmarshal }}
@@ -28,7 +28,7 @@
     {{ end }}
   {{ end }}
   {{ range $menu, $items := .Site.Menus }}
-    <nav class="icon">
+    <nav>
     {{ range $items }}
       {{ if and .Identifier (index $data .Identifier) }}
         {{ $icon := index $data .Identifier }}

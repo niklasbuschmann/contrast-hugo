@@ -153,12 +153,12 @@ body {
 body > header, body > footer {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
-
-body > header > a {
+body > header h1, body > footer h1 {
   font-size: 1.35em;
+  margin: 0;
 }
 
 nav {
@@ -170,9 +170,9 @@ nav > a {
 }
 nav svg {
   font-size: 1.1em;
+  vertical-align: sub;
   width: 1em;
   height: 1em;
-  vertical-align: sub;
   fill: currentColor;
 }
 
@@ -197,7 +197,7 @@ body > * {
   margin: 2em 1.5em;
 }
 
-body > header, body > footer {
+body > header a, body > footer a {
   font-weight: bold;
 }
 body > header a:hover, body > footer a:hover {

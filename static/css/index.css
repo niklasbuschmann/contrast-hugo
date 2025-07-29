@@ -153,12 +153,12 @@ body {
 body > header, body > footer {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
-
-body > header > a {
+body > header h1, body > footer h1 {
   font-size: 1.35em;
+  margin: 0;
 }
 
 nav {
@@ -170,9 +170,9 @@ nav > a {
 }
 nav svg {
   font-size: 1.1em;
+  vertical-align: sub;
   width: 1em;
   height: 1em;
-  vertical-align: sub;
   fill: currentColor;
 }
 
@@ -187,7 +187,7 @@ article > header h1 {
 .full {
   font-size: 1.5em;
   width: 100%;
-  margin: 0.1em 0 0.75em;
+  margin: 0.1em 0 0.7em;
 }
 
 .meta, .archive, h1, h2, h3, h4, h5, h6 {
@@ -241,11 +241,7 @@ article > header h1 {
   color: #46f;
 }
 
-.icon a:hover {
-  color: rgb(136, 136.5, 139.5);
-}
-
-.icon a:hover, .more a:hover, .gray a:hover, .archive a:hover {
+.more a:hover, .gray a:hover, .archive a:hover {
   text-decoration: inherit;
 }
 
@@ -267,6 +263,10 @@ body > * {
 body > header, body > footer {
   background: rgb(42.3756097561, 44.8682926829, 59.8243902439);
   color: #ffffff;
+}
+body > header:has(svg) a:hover, body > footer:has(svg) a:hover {
+  color: rgb(136, 136.5, 139.5);
+  text-decoration: inherit;
 }
 
 @media (min-width: 40em) {
