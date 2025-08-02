@@ -1,63 +1,7 @@
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: local("PT Sans"), local("PTSans-Regular"), url("../PT-Sans/regular-cyrillic-ext.woff2") format("woff2");
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: local("PT Sans"), local("PTSans-Regular"), url("../PT-Sans/regular-cyrillic.woff2") format("woff2");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: local("PT Sans"), local("PTSans-Regular"), url("../PT-Sans/regular-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: local("PT Sans"), local("PTSans-Regular"), url("../PT-Sans/regular-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url("../PT-Sans/bold-cyrillic-ext.woff2") format("woff2");
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url("../PT-Sans/bold-cyrillic.woff2") format("woff2");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url("../PT-Sans/bold-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url("../PT-Sans/bold-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 body {
-  font-family: "PT Sans", sans-serif;
-  font-size: calc(0.8rem + 0.2vw);
-  line-height: 1.6;
+  font: calc(0.8rem + 0.2vw)/1.6 "PT Sans", system-ui, sans-serif;
+  background: light-dark(white, rgb(33.9170731707, 35.912195122, 47.8829268293));
+  color: light-dark(#111218, white);
 }
 
 p {
@@ -65,11 +9,11 @@ p {
 }
 
 a {
-  color: #46f;
+  color: light-dark(#46f, #38f);
   text-decoration: inherit;
-  transition: 0.2s;
+  transition: 0.25s;
 }
-a:hover {
+article a:hover {
   text-decoration: underline;
 }
 header a, footer a, aside a {
@@ -86,10 +30,10 @@ footer {
 }
 
 blockquote {
-  background: rgba(136, 136.5, 139.5, 0.14);
-  border-left: 3px solid rgba(136, 136.5, 139.5, 0.8);
+  background: rgba(136, 136.5, 139.5, 0.1);
+  color: light-dark(rgb(69.8658536585, 73.9756097561, 98.6341463415), rgb(219.2926829268, 220.7804878049, 229.7073170732));
+  border-left: 3px solid rgba(136, 136.5, 139.5, 0.6);
   padding: 1px 1.5em;
-  opacity: 0.75;
 }
 
 blockquote, figure {
@@ -144,7 +88,6 @@ code:not(pre code) {
 body {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   min-height: 100vh;
   margin: 0;
   -webkit-text-size-adjust: 100%;
@@ -156,15 +99,20 @@ body > header, body > footer {
   justify-content: space-between;
   align-items: center;
 }
-body > header h1, body > footer h1 {
-  font-size: 1.35em;
+
+header h1 {
+  font-size: 1.75em;
   margin: 0;
+}
+body > header h1 {
+  font-size: 1.35em;
 }
 
 nav {
   margin: 0.5em -1.3em;
 }
-nav > a {
+nav a {
+  font-weight: bold;
   display: inline-block;
   margin: 0 1.3em;
 }
@@ -179,9 +127,13 @@ nav svg {
 article {
   flex-grow: 1;
 }
-article > header h1 {
-  font-size: 1.8em;
-  margin: 0;
+
+.meta, .hover {
+  -webkit-font-smoothing: antialiased;
+}
+
+.meta time {
+  opacity: 0.6;
 }
 
 .full {
@@ -190,58 +142,58 @@ article > header h1 {
   margin: 0.1em 0 0.7em;
 }
 
-.meta, .archive, h1, h2, h3, h4, h5, h6 {
-  -webkit-font-smoothing: antialiased;
+.hover a {
+  box-shadow: 0 2px transparent;
 }
-
-.meta time {
-  opacity: 0.6;
+.hover a:hover {
+  box-shadow: 0 2px;
+}
+.hover nav:has(svg) a:hover {
+  color: rgb(136, 136.5, 139.5);
+  box-shadow: none;
 }
 
 .more {
-  margin: 2em 0 1em;
+  padding: 1em 0;
 }
 
-.more a, .gray a {
+.more a, .dark a {
   border-radius: 4px;
   padding: 0.4em 0.8em;
 }
 
 .more a {
-  border: 1.5px solid #46f;
+  border: 1.5px solid light-dark(#46f, #38f);
 }
 .more a:hover {
-  color: #ffffff;
-  background: #46f;
+  color: white;
+  background: light-dark(#46f, #38f);
+  text-decoration: inherit;
 }
 
-.gray {
+.dark {
   flex-wrap: nowrap;
 }
-.gray a {
-  background: rgba(136, 136.5, 139.5, 0.2);
+.dark a {
+  background: light-dark(rgba(136, 136.5, 139.5, 0.2), transparent);
 }
-.gray a:hover {
-  background: #ffffff;
+.dark a:hover {
+  background: white;
   color: #111218;
 }
 
 .archive {
   font-size: 1.1em;
   list-style-type: none;
-  padding: 0;
+  padding: 1px 0;
 }
 .archive li {
-  margin: 0.6em 0;
+  margin: 0.5em 0;
 }
-.archive a {
+.archive a:not(:hover) {
   color: inherit;
 }
 .archive a:hover {
-  color: #46f;
-}
-
-.more a:hover, .gray a:hover, .archive a:hover {
   text-decoration: inherit;
 }
 
@@ -253,35 +205,24 @@ article > header h1 {
   background: rgb(48.7195121951, 51.5853658537, 68.7804878049)!important;
 }
 
+body {
+  background: rgb(234.2195121951, 235.0853658537, 240.2804878049);
+  background: light-dark(rgb(234.2195121951, 235.0853658537, 240.2804878049), rgb(33.9170731707, 35.912195122, 47.8829268293));
+  padding: 0 calc(38% - 22rem);
+}
+
 body > * {
-  background: #ffffff;
-  color: #111218;
-  box-shadow: 0 0 1em rgba(136, 136.5, 139.5, 0.1), 0 -1px rgba(136, 136.5, 139.5, 0.1);
-  padding: 1.5em;
+  background: white;
+  background: light-dark(white, rgb(33.9170731707, 35.912195122, 47.8829268293));
+  color: light-dark(#111218, white);
+  padding: 1.75em calc(22% - 6rem);
+  padding: clamp(1.5em, 4vw, 1.75em) max(1.5em, 22% - 6rem);
+  border-bottom: 1px solid rgba(136, 136.5, 139.5, 0.1);
+  box-shadow: 0 0 1em light-dark(rgba(136, 136.5, 139.5, 0.1), transparent), 0 0 0 1px light-dark(transparent, rgb(48.7195121951, 51.5853658537, 68.7804878049));
 }
 
 body > header, body > footer {
   background: rgb(42.3756097561, 44.8682926829, 59.8243902439);
-  color: #ffffff;
-}
-body > header:has(svg) a:hover, body > footer:has(svg) a:hover {
-  color: rgb(136, 136.5, 139.5);
-  text-decoration: inherit;
-}
-
-@media (min-width: 40em) {
-  body {
-    background: rgb(234.2195121951, 235.0853658537, 240.2804878049);
-    padding: 0 calc(38% - 22rem);
-  }
-  body > * {
-    padding: 1.75em calc(22% - 6rem);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  body, body > header, body > footer, body > * {
-    background: rgb(29.687804878, 31.4341463415, 41.912195122);
-    color: #ffffff;
-    box-shadow: 0 0 0 1px rgb(63.5219512195, 67.2585365854, 89.6780487805);
-  }
+  background: light-dark(rgb(42.3756097561, 44.8682926829, 59.8243902439), rgb(33.9170731707, 35.912195122, 47.8829268293));
+  color: white;
 }

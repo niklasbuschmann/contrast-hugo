@@ -1,63 +1,7 @@
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: local("PT Sans"), local("PTSans-Regular"), url("../PT-Sans/regular-cyrillic-ext.woff2") format("woff2");
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: local("PT Sans"), local("PTSans-Regular"), url("../PT-Sans/regular-cyrillic.woff2") format("woff2");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: local("PT Sans"), local("PTSans-Regular"), url("../PT-Sans/regular-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: local("PT Sans"), local("PTSans-Regular"), url("../PT-Sans/regular-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url("../PT-Sans/bold-cyrillic-ext.woff2") format("woff2");
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url("../PT-Sans/bold-cyrillic.woff2") format("woff2");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url("../PT-Sans/bold-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url("../PT-Sans/bold-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 body {
-  font-family: "PT Sans", sans-serif;
-  font-size: calc(0.85rem + 0.2vw);
-  line-height: 1.6;
+  font: calc(0.8rem + 0.2vw)/1.6 "PT Sans", system-ui, sans-serif;
+  background: light-dark(white, rgb(33.9170731707, 35.912195122, 47.8829268293));
+  color: light-dark(#111218, white);
 }
 
 p {
@@ -65,11 +9,11 @@ p {
 }
 
 a {
-  color: #f08;
+  color: light-dark(#46f, #38f);
   text-decoration: inherit;
-  transition: 0.2s;
+  transition: 0.25s;
 }
-a:hover {
+article a:hover {
   text-decoration: underline;
 }
 header a, footer a, aside a {
@@ -86,10 +30,10 @@ footer {
 }
 
 blockquote {
-  background: rgba(136, 136.5, 139.5, 0.14);
-  border-left: 3px solid rgba(136, 136.5, 139.5, 0.8);
+  background: rgba(136, 136.5, 139.5, 0.1);
+  color: light-dark(rgb(69.8658536585, 73.9756097561, 98.6341463415), rgb(219.2926829268, 220.7804878049, 229.7073170732));
+  border-left: 3px solid rgba(136, 136.5, 139.5, 0.6);
   padding: 1px 1.5em;
-  opacity: 0.75;
 }
 
 blockquote, figure {
@@ -144,7 +88,6 @@ code:not(pre code) {
 body {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   min-height: 100vh;
   margin: 0;
   -webkit-text-size-adjust: 100%;
@@ -156,15 +99,20 @@ body > header, body > footer {
   justify-content: space-between;
   align-items: center;
 }
-body > header h1, body > footer h1 {
-  font-size: 1.35em;
+
+header h1 {
+  font-size: 1.75em;
   margin: 0;
+}
+body > header h1 {
+  font-size: 1.35em;
 }
 
 nav {
   margin: 0.5em -1.3em;
 }
-nav > a {
+nav a {
+  font-weight: bold;
   display: inline-block;
   margin: 0 1.3em;
 }
@@ -179,9 +127,15 @@ nav svg {
 article {
   flex-grow: 1;
 }
-article > header h1 {
-  font-size: 1.8em;
-  margin: 0;
+
+.full {
+  font-size: 1.5em;
+  width: 100%;
+  margin: 0.1em 0 0.7em;
+}
+
+.katex-display {
+  overflow: auto hidden;
 }
 
 .highlight pre {
@@ -189,25 +143,11 @@ article > header h1 {
 }
 
 body {
-  display: block;
-  padding: 0 calc(40% - 16rem);
+  padding: 1em calc(40% - 16em);
 }
-
 body > * {
-  margin: 2em 1.5em;
-}
-
-body > header a, body > footer a {
-  font-weight: bold;
+  margin: 1em 1.5em;
 }
 body > header a:hover, body > footer a:hover {
   color: #f08;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background: rgb(25.4585365854, 26.956097561, 35.9414634146);
-    color: #ffffff;
-  }
 }
