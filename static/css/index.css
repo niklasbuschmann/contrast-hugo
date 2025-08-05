@@ -1,7 +1,7 @@
 body {
   font: calc(0.8rem + 0.2vw)/1.6 "PT Sans", system-ui, sans-serif;
-  background: light-dark(white, rgb(33.9170731707, 35.912195122, 47.8829268293));
-  color: light-dark(#111218, white);
+  background: light-dark(hsl(230, 18%, 100%), hsl(230, 18%, 16%));
+  color: light-dark(hsl(230, 18%, 6%), hsl(230, 18%, 100%));
 }
 
 p {
@@ -21,7 +21,7 @@ header a, footer a, aside a {
 }
 
 hr {
-  border: 1px dashed;
+  border: 1px solid rgb(131.32, 134.38, 149.68);
   margin: 2em 0;
 }
 
@@ -30,9 +30,9 @@ footer {
 }
 
 blockquote {
-  background: rgba(136, 136.5, 139.5, 0.1);
-  color: light-dark(rgb(69.8658536585, 73.9756097561, 98.6341463415), rgb(219.2926829268, 220.7804878049, 229.7073170732));
-  border-left: 3px solid rgba(136, 136.5, 139.5, 0.6);
+  background: rgba(131.32, 134.38, 149.68, 0.1);
+  color: light-dark(#555, #eee);
+  border-left: 3px solid rgba(131.32, 134.38, 149.68, 0.6);
   padding: 1px 1.5em;
 }
 
@@ -60,16 +60,17 @@ table {
 
 th, td {
   padding: 0.5em 1em;
-  border: 1px solid rgba(136, 136.5, 139.5, 0.24);
+  border: 1px solid rgba(131.32, 134.38, 149.68, 0.24);
 }
 
 thead, tr:hover td, tr:hover th {
-  background: rgba(136, 136.5, 139.5, 0.12);
+  background: rgba(131.32, 134.38, 149.68, 0.12);
 }
 
 pre:not(pre pre) {
   font-size: 0.8em;
-  background: rgba(136, 136.5, 139.5, 0.16);
+  background: hsl(230, 18%, 22%)!important;
+  color: hsl(230, 18%, 100%);
   border-radius: 4px;
   margin: 1.5em 0;
   padding: 0.8em 1.2em;
@@ -78,7 +79,7 @@ pre:not(pre pre) {
 
 code:not(pre code) {
   font-size: 0.9em;
-  background: rgba(136, 136.5, 139.5, 0.16);
+  background: rgba(131.32, 134.38, 149.68, 0.16);
   border-radius: 3px;
   margin: 0 0.1em;
   padding: 0.2em 0.4em;
@@ -149,7 +150,7 @@ article {
   box-shadow: 0 2px;
 }
 .hover nav:has(svg) a:hover {
-  color: rgb(136, 136.5, 139.5);
+  color: rgb(131.32, 134.38, 149.68);
   box-shadow: none;
 }
 
@@ -157,16 +158,17 @@ article {
   padding: 1em 0;
 }
 
-.more a, .dark a {
+.more a, .gray a, .dark a {
   border-radius: 4px;
   padding: 0.4em 0.8em;
 }
 
 .more a {
-  border: 1.5px solid light-dark(#46f, #38f);
+  border: 1.5px solid;
+  border-color: light-dark(#46f, #38f);
 }
 .more a:hover {
-  color: white;
+  color: light-dark(hsl(230, 18%, 100%), hsl(230, 18%, 100%));
   background: light-dark(#46f, #38f);
   text-decoration: inherit;
 }
@@ -175,11 +177,11 @@ article {
   flex-wrap: nowrap;
 }
 .dark a {
-  background: light-dark(rgba(136, 136.5, 139.5, 0.2), transparent);
+  background: light-dark(rgba(131.32, 134.38, 149.68, 0.2), rgba(131.32, 134.38, 149.68, 0.1));
 }
 .dark a:hover {
-  background: white;
-  color: #111218;
+  background: hsl(230, 18%, 100%);
+  color: hsl(230, 18%, 0%);
 }
 
 .archive {
@@ -201,28 +203,24 @@ article {
   overflow: auto hidden;
 }
 
-.highlight pre {
-  background: rgb(48.7195121951, 51.5853658537, 68.7804878049)!important;
-}
-
 body {
-  background: rgb(234.2195121951, 235.0853658537, 240.2804878049);
-  background: light-dark(rgb(234.2195121951, 235.0853658537, 240.2804878049), rgb(33.9170731707, 35.912195122, 47.8829268293));
+  background: hsl(230, 18%, 93%);
+  background: light-dark(hsl(230, 18%, 93%), hsl(230, 18%, 16%));
   padding: 0 calc(38% - 22rem);
 }
 
 body > * {
-  background: white;
-  background: light-dark(white, rgb(33.9170731707, 35.912195122, 47.8829268293));
-  color: light-dark(#111218, white);
+  background: hsl(230, 18%, 100%);
+  background: light-dark(hsl(230, 18%, 100%), hsl(230, 18%, 16%));
+  color: light-dark(hsl(230, 18%, 0%), hsl(230, 18%, 100%));
   padding: 1.75em calc(22% - 6rem);
   padding: clamp(1.5em, 4vw, 1.75em) max(1.5em, 22% - 6rem);
-  border-bottom: 1px solid rgba(136, 136.5, 139.5, 0.1);
-  box-shadow: 0 0 1em light-dark(rgba(136, 136.5, 139.5, 0.1), transparent), 0 0 0 1px light-dark(transparent, rgb(48.7195121951, 51.5853658537, 68.7804878049));
+  border-bottom: 1px solid rgba(131.32, 134.38, 149.68, 0.1);
+  box-shadow: 0 0 1em light-dark(rgba(131.32, 134.38, 149.68, 0.1), transparent), 0 0 0 1px light-dark(transparent, hsl(230, 18%, 26%));
 }
 
 body > header, body > footer {
-  background: rgb(42.3756097561, 44.8682926829, 59.8243902439);
-  background: light-dark(rgb(42.3756097561, 44.8682926829, 59.8243902439), rgb(33.9170731707, 35.912195122, 47.8829268293));
-  color: white;
+  background: hsl(230, 18%, 20%);
+  background: light-dark(hsl(230, 18%, 20%), hsl(230, 18%, 16%));
+  color: hsl(230, 18%, 100%);
 }
