@@ -1,5 +1,6 @@
 body {
-  font: calc(0.8rem + 0.2vw)/1.6 "PT Sans", system-ui, sans-serif;
+  font: 16px/1.6 "PT Sans", system-ui, sans-serif;
+  font-size: calc(0.8rem + 0.2vw);
   background: light-dark(hsl(230, 18%, 100%), hsl(230, 18%, 16%));
   color: light-dark(hsl(230, 18%, 6%), hsl(230, 18%, 100%));
 }
@@ -23,10 +24,6 @@ header a, footer a, aside a {
 hr {
   border: 1px solid rgb(131.32, 134.38, 149.68);
   margin: 2em 0;
-}
-
-footer {
-  margin-top: auto;
 }
 
 blockquote {
@@ -63,11 +60,11 @@ th, td {
   border: 1px solid rgba(131.32, 134.38, 149.68, 0.24);
 }
 
-thead, tr:hover td, tr:hover th {
+thead, tr:hover {
   background: rgba(131.32, 134.38, 149.68, 0.12);
 }
 
-pre:not(pre pre) {
+pre {
   font-size: 0.8em;
   background: hsl(230, 18%, 22%)!important;
   color: hsl(230, 18%, 100%);
@@ -129,12 +126,12 @@ article {
   flex-grow: 1;
 }
 
-.meta, .hover {
+.archive, .hover {
   -webkit-font-smoothing: antialiased;
 }
 
 .meta time {
-  opacity: 0.6;
+  color: rgb(131.32, 134.38, 149.68);
 }
 
 .full {
