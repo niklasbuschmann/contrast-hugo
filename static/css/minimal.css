@@ -138,6 +138,7 @@ body {
 body > * {
   margin: 1em 1.5em;
 }
-body > header a:hover, body > footer a:hover {
+header a:hover, footer a:hover {
   color: #f08;
+  text-decoration: inherit;
 }
