@@ -9,14 +9,14 @@
 </article>
 
 {{ $Pages := .CurrentSection.Pages.ByWeight.Reverse }}
-<footer class="dark">
+<footer class="nowrap">
 {{- with $Pages.Prev . -}}
-  <a href="{{ .RelPermalink }}">« {{ .Title }}</a> 
+  <a class="dark" href="{{ .RelPermalink }}">« {{ .Title }}</a> 
 {{- else -}}
   <span></span>
 {{- end -}}
 {{- with $Pages.Next . -}}
-   <a href="{{ .RelPermalink }}">{{ .Title }} »</a>
+   <a class="dark" href="{{ .RelPermalink }}">{{ .Title }} »</a>
 {{- else -}}
   <span></span>
 {{- end -}}
